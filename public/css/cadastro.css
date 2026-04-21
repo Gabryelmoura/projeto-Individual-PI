@@ -1,0 +1,260 @@
+body{
+   margin: 0px;
+   padding: 0px;
+   font-family: sans-serif; 
+}
+
+/* Estilização do Cabeçalho */
+.header{
+    height: 80px;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 2px solid rgba(0, 0, 0, 0.486);
+}
+
+.logo{
+    height: auto;
+    width: 300px;
+    text-align: center;
+    margin-right: 50px;
+}
+
+h1{
+    font-size: 35px;
+    color: purple;
+}
+
+.voltar{
+    height: 50px;
+    width: 100px;
+    margin-left: 50px;
+    padding: 0px;
+
+    background-color: transparent;
+    border: 2px solid rgb(0, 132, 255);
+    font-size: 18px;
+
+    transition: all 0.3s ease-in-out;
+}
+
+.voltar:hover{
+    background-color: rgb(0, 132, 255);
+    color: white;
+}
+
+.link-voltar{
+    padding: 12px 27px;
+    color: rgb(0, 132, 255);
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.link-voltar:hover{
+    color: white;
+}
+
+/* Estilização do Conteúdo Principal */
+.login {
+    height: 550px;
+    width: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.login .container {
+    background-color: rgb(245, 245, 245);
+    height: 550px;
+    width: 50%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilização do Banner */
+.login .banner{
+    height: 550px;
+    width: 50%;
+    
+    background-image: url('../assets/imagens/banner_cadastro.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 80%;
+
+    box-shadow: inset 3px 3px 3px rgba(0, 0, 0, 0.322);
+}
+/* Fim Estilização do Banner */
+
+.card {
+    background-color: white;
+    height: 450px;
+    width: 450px;
+    padding: 10px 0px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border: 2px solid rgb(202, 202, 202);
+    border-radius: 5px;
+}
+
+.card h2 {
+    margin: 0;
+    font-size: 30px;
+}
+
+.formulario {
+    display: flex;
+    height: 85%;
+    width: 80%;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.formulario span {
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.formulario input {
+    border: 2px solid rgb(180, 180, 180);
+    text-align: start;
+    border-radius: 5px;
+    width: 94%;
+    margin: 0;
+}
+
+.formulario select {
+    border: 2px solid #32b9cd;
+    background-color: white;
+    color: gray;
+    height: 36px;
+    text-align: center;
+    border-radius: 10px;
+    margin: 0;
+}
+
+.campo {
+    width: 100%;
+    padding: 10px 0px;
+
+}
+
+.botao {
+    height: 50px;
+    width: 150px;
+    background-color: white;
+    padding: 0px;
+
+    border: 2px solid rgb(0, 132, 255);
+    border-radius: 5px;
+    font-size: 18px;
+
+    transition: all 0.3s ease-in-out;
+}
+
+.botao:hover{
+    background-color: rgb(0, 132, 255);
+    color: white;
+}
+
+.loading-div {
+    width: 50px;
+    display: none;
+}
+
+.loading-div img {
+    height: 50px;
+    width: 50px;
+}
+
+#div_erros_login {
+    display: none
+}
+
+/* FORMULARIO */
+.alerta_erro{
+    z-index: 10;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.card_erro {
+    z-index: 10;
+    display: none;
+    background-color: #fff;
+    color: black;
+    width: 230px;
+    position: fixed;
+    border-radius: 4px;
+    border: #ED145B 3px solid;
+    padding: 10px;
+    margin-right: 10%;
+}
+
+.card_erro #mensagem_erro{
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.formulario .tipo_campo {
+    font-size: 20px;
+    font-weight: 600 !important;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    margin-bottom: 10px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+
+.loading-div {
+    width: 50px;
+    margin: auto;
+    display: none;
+}
+
+.loading-div img {
+    height: 50px;
+    width: 50px;
+}
+
+/* FOOTER */
+.footer {
+    background-image: -moz-linear-gradient(45deg, rgb(201, 17, 201), purple, black);
+    height: 250px;
+    width: 100%;
+
+    display: flex;
+    flex-flow: column;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+}
+
+.footer .container {
+    width: 90%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+}
