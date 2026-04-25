@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body{
+   margin: 0px;
+   padding: 0px;
+   font-family: sans-serif; 
+}
+
+/* Estilização do Cabeçalho */
+.header{
+    background-color: #333;
+    height: 80px;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    border-bottom: 2px solid rgba(0, 0, 0, 0.486);
+}
+
+.logo{
+    height: auto;
+    width: 300px;
+    text-align: center;
+    
+}
+
+h1{
+    font-size: 35px;
+    color: purple;
+}
+
+.navbar{
+    width: 500px;
+    padding: 10px 0px;
+
+    display: flex;
+    justify-content: space-around;
+
+    list-style-type: none;
+}
+
+.agora{
+    background-color: blue;
+    list-style: none;
+}
+
+li > a{
+    color: white;
+}
+
+/* Estilização do Banner */
+.banner{
+    height: 500px;
+    width: 100%;
+
+    background-image: url('../assets/imagens/banner_cadastro.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Estilização do Conteudo Principal */
+.main{
+    height: auto;
+    width: 100%;
+}
+
+/* Estilização da Introdução */
+.introducao{
+    background-color: red;
+}
+
+/* Estilização da Desafio */
+
+
+/* Estilização da Design */
+
+
+/* Estilização da Curiosidade */
+
+
+/* Estilização da Legado */
+
+
+/* Estilização Calculadora */
+
+
+/* Estilização do Rodapé */
+.footer {
+    background-image: -moz-linear-gradient(45deg, rgb(201, 17, 201), purple, black);
+    height: 250px;
+    width: 100%;
+
+    display: flex;
+    flex-flow: column;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+}
+
+.footer h1{
+    color: white;
+}
+
+.footer .container {
+    width: 90%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+}
