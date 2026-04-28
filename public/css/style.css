@@ -1,9 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 body{
    margin: 0px;
    padding: 0px;
-   font-family: sans-serif; 
+   font-family: sans-serif;
+   background-color: white;
 }
 
 /* Estilização do Cabeçalho */
@@ -23,37 +24,51 @@ body{
     height: auto;
     width: 300px;
     text-align: center;
-    
 }
 
 h1{
     font-size: 35px;
-    color: purple;
+    color: rgb(233, 9, 233);
 }
 
 .navbar{
     width: 500px;
-    padding: 10px 0px;
+    height: auto;
 
     display: flex;
     justify-content: space-around;
 
+    color: white;
     list-style-type: none;
 }
 
 .agora{
-    background-color: blue;
+    background-color: rgb(233, 9, 233);
+    color: black;
     list-style: none;
+}
+
+li{
+    padding: 10px 15px;
+}
+
+li:hover{
+    text-decoration: underline;
 }
 
 li > a{
     color: white;
+    text-decoration: none;
 }
 
 /* Estilização do Banner */
 .banner{
-    height: 500px;
+    height: 525px;
     width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     background-image: url('../assets/imagens/banner_cadastro.jpg');
     background-size: cover;
@@ -61,31 +76,229 @@ li > a{
     background-attachment: fixed;
 }
 
+.banner > p{ 
+    background-color: #333333b2;
+    padding: 50px 0px;
+    width: 90%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+    font-size: 60px;
+    color: white;
+    border-radius: 25px;
+}
+
+.banner > p > span{
+    color: rgb(233, 9, 233);
+    padding: 0px 15px;
+    font-family: Bebas Neue;    
+}
+
+
 /* Estilização do Conteudo Principal */
 .main{
     height: auto;
     width: 100%;
+
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Estilização da Introdução */
 .introducao{
-    background-color: red;
+    background-color: #333;
+    height: 500px;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: inset 3px 8px 10px rgba(0, 0, 0, 0.596);
+}
+
+.introducao-texto{
+    background-color: white;
+    height: 350px;
+    width: 60%;
+    padding: 20px 30px;
+    font-size: 18px;
+}
+
+
+.introducao-texto > h2{
+    padding-left: 10px;
+    line-height: 50px;
+    border-bottom: 2px solid black;
+}
+
+.introducao > img{
+    height: 400px;  
 }
 
 /* Estilização da Desafio */
+.desafio{
+    background-color: #333;
+    width: 95%;
+    height: auto;
+    color: white;
+}
 
+.desafio > .card{
+    height: auto;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
 
-/* Estilização da Design */
+.desafio > .card > .desafio-texto{
+    margin: 10px 0px;
+    width: 95%;
+}
 
+.desafio > .card > .desafio-texto > h2{
+    padding-left: 10px;
+    line-height: 50px;
+    border-bottom: 2px solid black;
+}
 
-/* Estilização da Curiosidade */
+.desafio > .card > .desafio-texto > p{
+    padding: 0px 20px;
+}
 
-
-/* Estilização da Legado */
-
+.desafio > .card > img{
+    height: 470px;
+    width: 95%;
+}
 
 /* Estilização Calculadora */
+.calculadora{
+    background-color: #1a1a1a;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px 0px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
 
+.calculadora > .cont{
+    display: flex;
+
+}
+
+/* Estilização da Design */
+.design{
+    background-color: #333;
+    width: 95%;
+    height: auto;
+    color: white;
+}
+
+.design > .card{
+    height: auto;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.design > .card > .design-texto{
+    margin: 10px 0px;
+    width: 95%;
+}
+
+.design > .card > .design-texto > h2{
+    padding-left: 10px;
+    line-height: 50px;
+    border-bottom: 2px solid black;
+}
+
+.design > .card > .design-texto > p{
+    padding: 0px 20px;
+}
+
+.design > .card > img{
+    height: 470px;
+    width: 95%;
+}
+
+/* Estilização da Curiosidade */
+.curiosidade{
+    background-color: #333;
+    height: 500px;
+    width: 100%;
+}
+
+.card{
+    height: 500px;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.card > .curiosidade-texto{
+    background-color: white;
+    height: 350px;
+    width: 45%;
+    padding: 0px 10px;
+    font-size: 18px;
+}
+
+
+.card > .curiosidade-texto > h2{
+    padding-left: 10px;
+    line-height: 50px;
+    border-bottom: 2px solid black;
+}
+
+.curiosidade > .card > img{
+    height: 350px;
+    width: 45%;
+    object-fit: cover;  
+}
+
+/* Estilização da Legado */
+.legado{
+    width: 95%;
+    height: auto;
+    box-shadow: inset 3px 8px 10px rgba(0, 0, 0, 0.144);
+    margin-bottom: 100px;
+}
+
+.legado > .card{
+    height: auto;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.legado > .card > .legado-texto{
+    margin: 10px 0px;
+    width: 85%;
+}
+
+.legado > .card > .legado-texto > h2{
+    padding-left: 10px;
+    line-height: 50px;
+    border-bottom: 2px solid black;
+}
+
+.legado > .card > .legado-texto > p{
+    padding: 0px 20px;
+}
+
+.legado > .card > img{
+    height: 470px;
+    width: 85%;
+}
 
 /* Estilização do Rodapé */
 .footer {

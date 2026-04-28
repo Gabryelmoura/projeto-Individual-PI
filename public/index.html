@@ -51,119 +51,157 @@
 
   <!-- Banner -->
   <div class="banner">
-    <div class="container">
-      <p>Preservando <span>hoje</span> para existirem <span>amanhã</span>.</p>
-    </div>
+    <p>Seja bem-vindo ao seu <span>Blog</span> de <span>Games</span>.</p>
   </div>
 
   <!-- Conteudo Principal -->
   <div class="main">
-    <h1>Introdução</h1>
+    <!-- Conteudo Introdução -->
+    <h1 style="margin: 50px 0px;">Introdução</h1>
     <div class="introducao">
-      <div class="texto">
+      <div class="introducao-texto">
         <h2>O Crash de 1983:</h2>
-        <p>No início dos anos 80, o mercado estava saturado. Qualquer empresa (até marcas de comida) tentava lançar jogos para o Atari 2600. O resultado foi uma enxurrada de títulos péssimos, culminando no desastroso jogo do E.T. <br>
+        <p>No início dos anos 80, o mercado estava saturado. Qualquer empresa (até marcas de comida) tentava lançar jogos para o Atari 2600. O resultado foi uma enxurrada de títulos péssimos, culminando no desastroso jogo do E.T. <br><br>
 
-        O Problema: A perda de confiança do consumidor. As lojas pararam de vender consoles, achando que videogames eram uma moda passageira que tinha morrido. <br>
+        O Problema: A perda de confiança do consumidor. As lojas pararam de vender consoles, achando que videogames eram uma moda passageira que tinha morrido. <br><br>
 
         A Salvação: A Nintendo lançou o Famicom (NES) com um selo de qualidade ("Nintendo Seal of Quality"), garantindo que apenas jogos licenciados e testados chegassem ao público, restaurando a credibilidade da indústria. </p>
       </div>
 
-      <img src="assets/imgs/growth_color.png" alt="">
+      <img src="assets/imagens/image_ET-Game.jpg" alt="Imagem do jogo ET">
     </div>
 
-    <h1>Desafio</h1>
+    <!-- Conteudo Desafio -->
+    <h1 style="margin: 50px 0px;">Desafio</h1>
     <div class="desafio">
       <div class="card">
-        <div class="texto">
+        <div class="desafio-texto">
           <h2>Cores e Sombras no 8-bit:</h2>
-          <p>As paletas de cores eram muito limitadas (o NES, por exemplo, tinha cerca de 50 cores disponíveis). <br>
-          Design Funcional: Mario usa um macacão para que seus braços sejam visíveis contra o corpo, e um bigode para que o nariz seja identificado sem precisar desenhar uma boca detalhada. <br>
+          <p>As paletas de cores eram muito limitadas (o NES, por exemplo, tinha cerca de 50 cores disponíveis). <br><br>
+
+          Design Funcional: Mario usa um macacão para que seus braços sejam visíveis contra o corpo, e um bigode para que o nariz seja identificado sem precisar desenhar uma boca detalhada. <br><br>
+
           O Truque: Como não havia degradê suave, usava-se o dithering (intercalar pixels de duas cores diferentes) para criar a ilusão de uma terceira cor ou sombra.</p>
         </div>
-        <img src="assets/imgs/growth_color.png" alt="">
+        <img src="assets/imagens/image_mario.png" alt="Imagem explicando as cores">
       </div>
 
-      <div class="card">
-        <div class="texto">
+      <div id="calc" class="card">
+        <div class="desafio-texto">
           <h2>O "Pulo do Gato" dos Processadores:</h2>
-          <p>Antigamente, memória não era medida em Gigabytes, mas em Bytes simples. O Atari 2600 tinha apenas 128 bytes de RAM (isso não dá para uma frase de texto hoje). <br>
+          <p>Antigamente, memória não era medida em Gigabytes, mas em Bytes simples. O Atari 2600 tinha apenas 128 bytes de RAM (isso não dá para uma frase de texto hoje). <br><br>
 
-          A Mágica: Os programadores tinham que "desenhar" o jogo na TV linha por linha, em tempo real, enquanto o feixe de elétrons do tubo passava.  <br>
+          A Mágica: Os programadores tinham que "desenhar" o jogo na TV linha por linha, em tempo real, enquanto o feixe de elétrons do tubo passava.  <br><br>
 
           O Legado: Essa escassez extrema forçou a criação de algoritmos de compressão e lógica de código que são a base da computação moderna. </p>
         </div>
-        <img src="assets/imgs/growth_color.png" alt="">
+      </div>
+
+      <div class="calculadora">
+          <h2 style="color: rgb(233, 9, 233);">Calculadora de Memória</h2>
+    
+          <div class="formulario">
+            <input type="number" id="ipt_Value" value="128" oninput="converter()">
+
+            <select id="ipt_Unit" onchange="converter()">
+                <option value="B">Bytes</option>
+                <option value="MB">Megabytes (MB)</option>
+                <option value="GB">Gigabytes (GB)</option>
+            </select>
+          </div>
+
+          <div class="resultado">
+            <p><strong>Bytes:</strong> <span id="resB">128</span></p>
+
+            <p><strong>Megabytes:</strong> <span id="resMB">0.000122</span></p>
+            
+            <p><strong>Gigabytes:</strong> <span id="resGB">0.000000119</span></p>
+            
+            <hr>
+            
+            <p><strong>Decimal:</strong> <span id="resDec">128</span></p>
+            
+            <p><strong>Octal:</strong> <span id="resOct">200</span></p>
+            
+            <p><strong>Hexadecimal:</strong> <span id="resHex">80</span></p>
+            
+            <p id="atariCompare">
+                Isso equivale a 1 consoles Atari 2600.
+            </p>
+          </div>
       </div>
     </div>
 
-    <h1>Design</h1>
+    <!-- Conteudo Design -->
+    <h1 style="margin: 50px 0px;">Design</h1>
     <div class="design">
       <div class="card">
-        <div class="texto">
+        <div class="design-texto">
           <h2>Limitações Criativas (Parallax Scrolling):</h2>
-          <p>Até o início da era 16-bit, os fundos dos jogos eram estáticos. O Parallax mudou tudo.<br>
+          <p>Até o início da era 16-bit, os fundos dos jogos eram estáticos. O Parallax mudou tudo.<br><br>
 
-          A Técnica: Consiste em mover as camadas do fundo em velocidades diferentes. O que está "longe" move devagar; o que está "perto" move rápido. <br>
+          A Técnica: Consiste em mover as camadas do fundo em velocidades diferentes. O que está "longe" move devagar; o que está "perto" move rápido. <br><br>
           
           O Efeito: Isso engana o cérebro humano, criando uma sensação de profundidade 3D em um hardware que só conseguia processar imagens 2D planas. </p>
         </div>
-        <img src="assets/imgs/growth_color.png" alt="">
+        <img src="assets/imagens/image_parallax.PNG" alt="Imagem explicando Parallax">
       </div>
 
       <div class="card">
-        <div class="texto">
+        <div class="design-texto">
           <h2>Narrativa Silenciosa: </h2>
-          <p>Sem espaço para vídeos (cutscenes) ou diálogos extensos, os jogos usavam o design ambiental.<br>
+          <p>Sem espaço para vídeos (cutscenes) ou diálogos extensos, os jogos usavam o design ambiental.<br><br>
 
-          Exemplo: Em Super Metroid, a solidão e o perigo são transmitidos pela trilha sonora melancólica e pela arquitetura hostil do planeta Zebes. <br>
+          Exemplo: Em Super Metroid, a solidão e o perigo são transmitidos pela trilha sonora melancólica e pela arquitetura hostil do planeta Zebes. <br><br>
           
           Show, don't tell: O jogador aprende a história observando estátuas antigas, naves destruídas e o comportamento dos inimigos, criando uma imersão muito mais profunda do que textos explicativos. </p>
         </div>
-        <img src="assets/imgs/growth_color.png" alt="">
       </div>
     </div>
 
-    <h1>Curiosidade</h1>
+    <!-- Conteudo Curiosidade -->
+    <h1 style="margin: 50px 0px;">Curiosidade</h1>
     <div class="curiosidade">
       <div class="card">
-        <div class="texto">
+        <img src="assets/imagens/image_skyblazer.jpg" alt="Imagem do jogo Skyblazer">
+        
+        <div class="curiosidade-texto">
           <h2>Hidden Gems (Pérolas Escondidas):</h2>
-          <p>Com milhares de lançamentos para SNES e Mega Drive, muitos jogos incríveis falharam comercialmente por falta de marketing ou por saírem no fim da vida do console. <br>
+          <p>Com milhares de lançamentos para SNES e Mega Drive, muitos jogos incríveis falharam comercialmente por falta de marketing ou por saírem no fim da vida do console. <br><br>
 
-          Exemplos clássicos: Skyblazer (SNES) ou The Misadventures of Flink (Mega Drive). <br>
+          Exemplos clássicos: Skyblazer (SNES) ou The Misadventures of Flink (Mega Drive). <br><br>
           
           O Valor: Explorar esses jogos mostra que a biblioteca retrô é muito mais profunda do que apenas Mario, Sonic e Donkey Kong. </p>
         </div>
-        <img src="assets/imgs/growth_color.png" alt="">
       </div>
     </div>
 
-    <h1>Legado</h1>
+    <!-- Conteudo Legado -->
+    <h1 style="margin: 50px 0px;">Legado</h1>
     <div class="legado">
       <div class="card">
-        <div class="texto">
+        <div class="legado-texto">
           <h2>Demakes:</h2>
-          <p>É um movimento artístico moderno onde desenvolvedores recriam jogos atuais usando as limitações técnicas de consoles antigos. <br>
+          <p>É um movimento artístico moderno onde desenvolvedores recriam jogos atuais usando as limitações técnicas de consoles antigos. <br><br>
 
-          O Apelo: Ver como a complexidade de um Bloodborne se traduz nos polígonos serrilhados do PS1 evoca uma nostalgia estética única. <br>
+          O Apelo: Ver como a complexidade de um Bloodborne se traduz nos polígonos serrilhados do PS1 evoca uma nostalgia estética única. <br><br>
           
           Exercício Mental: Isso prova que uma boa mecânica de jogo é atemporal, independente da contagem de polígonos. </p>
         </div>
-        <img src="assets/imgs/growth_color.png" alt="">
+        <img src="assets/imagens/image_bloodborn.PNG" alt="">
       </div>
 
       <div class="card">
-        <div class="texto">
+        <div class="legado-texto">
           <h2>Cenário de Emulação e Preservação:</h2>
-          <p>Jogos em cartuchos e consoles antigos estragam com o tempo (apodrecimento de trilhas e capacitores).<br>
+          <p>Jogos em cartuchos e consoles antigos estragam com o tempo (apodrecimento de trilhas e capacitores).<br><br>
 
-          Preservação: A emulação em dispositivos como Raspberry Pi ou portáteis chineses (Miyoo Mini, Anbernic) não é apenas sobre "jogar de graça", mas sobre manter viva a história do software. <br>
+          Preservação: A emulação em dispositivos como Raspberry Pi ou portáteis chineses (Miyoo Mini, Anbernic) não é apenas sobre "jogar de graça", mas sobre manter viva a história do software. <br><br>
           
           A Ética: O debate sobre empresas que não vendem mais seus jogos clássicos, mas processam quem tenta preservá-los através de ROMs. </p>
         </div>
-        <img src="assets/imgs/growth_color.png" alt="">
       </div>
+    </div>
   </div>
 
   <!-- Rodapé -->
@@ -186,9 +224,44 @@
         </ul>
       </div>
     </div>
-
-    <h4>Feito pelo Gabryel da Silva Moura &copy; 2026</h4>
   </div>
-
 </body>
 </html>
+
+<script>
+function converter() {
+    let val = Number(ipt_Value.value);
+    let unit = ipt_Unit.value;
+    
+    if (isNaN(val)){
+      alert("Informe um valor Numérico.")
+    };
+
+    let bytes = 0;
+
+    if (unit === "B") {
+        bytes = val;
+    } else if (unit === "MB") {
+        bytes = val * 1024 * 1024;
+    } else if (unit === "GB") {
+        bytes = val * 1024 * 1024 * 1024;
+    }
+
+    let mb = bytes / (1024 * 1024);
+    let gb = bytes / (1024 * 1024 * 1024);
+
+    let intBytes = bytes - (bytes % 1);
+    let divAtari = bytes / 128;
+    let atariQtd = ( (divAtari * 100) - ((divAtari * 100) % 1) ) / 100;
+
+    resB.innerHTML = intBytes;
+    resMB.innerHTML = mb.toFixed(6);
+    resGB.innerHTML = gb.toFixed(9);
+    
+    resDec.innerHTML = intBytes;
+    resOct.innerHTML = intBytes.toString(8);
+    resHex.innerHTML = intBytes.toString(16).toUpperCase();
+
+    atariCompare.innerHTML = "Isso equivale a " + atariQtd + " consoles Atari 2600.";
+}
+</script>
