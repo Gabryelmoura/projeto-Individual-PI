@@ -29,5 +29,5 @@ Uma lista das ferramentas e linguagens:
 
 - Documentação: https://bandteccom-my.sharepoint.com/:w:/g/personal/gabryel_moura_sptech_school/IQAyOq-v_qRWT5vvA5vZJoOBAf6VobSr2hagfP9XVNUszqw?e=NTFbFY
 
-## Autores
+## Autor
 - Gabryel da Silva Moura.

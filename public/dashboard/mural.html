@@ -20,10 +20,7 @@
 </head>
 
 <body onload="validarSessao(), atualizarFeed()" style="background-color: #161618;">
-
     <div class="janela">
-
-
         <div class="header-left">
 
             <h1>AquaTech</h1>
@@ -90,16 +87,10 @@
             </div>
         </div>
     </div>
-
-
-
-
 </body>
-
 </html>
 
 <script>
-    
     b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
 
     function limparFormulario() {
@@ -140,7 +131,6 @@
         });
 
         return false;
-
     }
 
     function editar(idAviso) {
@@ -246,5 +236,4 @@
             finalizarAguardar();
         });
     }
-
 </script>
