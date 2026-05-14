@@ -7,6 +7,39 @@ body{
    background-color: white;
 }
 
+#subir{
+    background-color: white;
+    border: 3px solid rgb(233, 9, 233);
+    border-radius: 15px;
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 75px;
+    width: 75px;
+    transition: all 0.2s ease-in;
+}
+
+#subir > a{
+    font-size: 1.1em;
+    font-weight: 900;
+    text-decoration: none;
+    color: purple;
+    padding: 20px;
+    transition: all 0.2s ease-in;
+}
+
+#subir:hover{
+    border-color: rgb(246, 91, 246);
+    background-color: rgb(246, 91, 246);
+}
+
+#subir > a:hover{
+    color: white;
+}
+
 /* Estilização do Cabeçalho */
 .header{
     background-color: #333;

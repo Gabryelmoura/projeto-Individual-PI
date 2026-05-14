@@ -9,22 +9,27 @@ CREATE TABLE usuario (
 	senha VARCHAR(50)
 );
 
+CREATE TABLE jogos(
+	id INT PRIMARY KEY AUTO_INCREMENT,
+    titulo VARCHAR(100),
+    plataforma VARCHAR(50)
+);
+
+CREATE TABLE favorito (
+    idFavorito INT PRIMARY KEY AUTO_INCREMENT,
+    fkUsuario INT,
+    fkJogo INT,
+    momento_registro DATETIME,
+    FOREIGN KEY (fkUsuario) REFERENCES usuario(id),
+    FOREIGN KEY (fkJogo) REFERENCES jogos(id)
+);
+
 CREATE TABLE aviso (
 	id INT PRIMARY KEY AUTO_INCREMENT,
 	titulo VARCHAR(100),
 	descricao VARCHAR(150),
 	fk_usuario INT,
 	FOREIGN KEY (fk_usuario) REFERENCES usuario(id)
-);
-
-create table medida (
-	id INT PRIMARY KEY AUTO_INCREMENT,
-	dht11_umidade DECIMAL,
-	dht11_temperatura DECIMAL,
-	luminosidade DECIMAL,
-	lm35_temperatura DECIMAL,
-	chave TINYINT,
-	momento DATETIME
 );
 
 select * from aviso;

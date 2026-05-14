@@ -34,6 +34,7 @@
 
             <div class="hello">
                 <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
+                <h3>Sua, <span id="b_email">Senha</span>!</h3>
             </div>
 
             <div class="btn-nav-white">
@@ -43,9 +44,7 @@
             </div>
 
             <div class="btn-nav">
-
                 <h3>Gráficos</h3>
-
             </div>
 
             <div class="btn-nav-white">
@@ -75,6 +74,7 @@
 
 <script>
     b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+    b_email.innerHTML = sessionStorage.EMAIL_USUARIO;
 
     let proximaAtualizacao;
 

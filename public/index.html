@@ -19,7 +19,7 @@
 
 <body>
   <!--Header-->
-  <div class="header">
+  <div id="header" class="header">
     <div class="logo">
       <h1>Nexium</h1>
     </div>
@@ -34,7 +34,7 @@
       </li>
 
       <li>
-        <a href="simulador.html">Simulador</a>
+        <a href="jogos.html">Jogos</a>
       </li>
 
       <li>|</li>
@@ -222,13 +222,20 @@
           <li>Facebook</li>
           <li>Git Hub</li>
         </ul>
+
+        <!--  -->
+        <div id="b_senha"></div>
       </div>
     </div>
   </div>
+
+  <button id="subir"><a href="#header">TOP</a></button>
 </body>
 </html>
 
 <script>
+  b_senha.innerHTML = sessionStorage.SENHA_USUARIO;
+
 function converter() {
     let val = Number(ipt_Value.value);
     let unit = ipt_Unit.value;

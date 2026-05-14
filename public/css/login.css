@@ -61,7 +61,7 @@ h1{
 
 /* Estilização do Conteúdo Principal */
 .login {
-    height: 535px;
+    height: 735px;
     width: 100%;
 
     display: flex;
@@ -71,7 +71,7 @@ h1{
 
 .login .container {
     background-color: rgb(245, 245, 245);
-    height: 535px;
+    height: 735px;
     width: 50%;
 
     display: flex;
@@ -82,7 +82,7 @@ h1{
 
 /* Estilização do Banner */
 .login .banner{
-    height: 535px;
+    height: 735px;
     width: 50%;
     
     background-image: url('../assets/imagens/banner_login.jpg');
@@ -96,7 +96,7 @@ h1{
 
 .card {
     background-color: white;
-    height: 400px;
+    height: 450px;
     width: 450px;
     padding: 10px 0px;
 
@@ -120,10 +120,10 @@ h1{
 }
 
 .formulario {
-    display: flex;
     height: 85%;
     width: 80%;
-    justify-content: space-around;
+    display: flex;
+    justify-content: center;
     flex-direction: column;
 }
 
@@ -161,6 +161,7 @@ h1{
     width: 150px;
     background-color: white;
     padding: 0px;
+    margin: 20px 0px;
 
     border: 2px solid rgb(0, 132, 255);
     border-radius: 5px;
