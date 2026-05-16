@@ -86,27 +86,44 @@
         var emailVar = email_input.value;
         var senhaVar = senha_input.value;
         let count = 0;
+        let erro = true;
         
-        if (emailVar == "" || senhaVar == "") {
-            msg_Erro.innerHTML = "Todos os campos em branco.";
-            finalizarAguardar();  
-            return false;
-        // } else if(emailVar.includes('@') == false){
-        //     msg_Erro.innerHTML += "Email informado sem o @.";
-        //     msg_Erro.innerHTML += `${count} tentativa`;
-        //     finalizarAguardar();
-        //     count++
-        //     return false;
-        // } else if(senhaVar.length < 6){
-        //     msg_Erro.innerHTML += "Senha precisa conter pelo menos 6 caracteres.";
-        //     msg_Erro.innerHTML += `${count} tentativa`;
-        //     finalizarAguardar();
-        //     count++
-        //     return false;
-        // } else {
-        //     setInterval(sumirMensagem, 5000)
-        // 
+        while(erro == true){
+            if (emailVar == "" && senhaVar == "") {
+                msg_Erro.innerHTML = `Todos os campos em branco.<br>  ${count}`;
+                finalizarAguardar();
+                count += 1; 
+                return false;
+            } 
+            
+            else if(emailVar.includes('@') == false){
+                msg_Erro.innerHTML += `Email informado sem o @.<br> ${count}`;
+                finalizarAguardar();
+                count += 1;
+                return false;
+            }
+
+            else if(emailVar.includes('.gmail.com') == false){
+                msg_Erro.innerHTML += `Email informado sem o "gmail.com" <br> ${count}`;
+                finalizarAguardar();
+                count += 1;
+                return false;
+            } 
+            
+            else if(senhaVar.length < 6){
+                msg_Erro.innerHTML += `Senha precisa conter pelo menos 6 caracteres.<br> ${count}`;
+                finalizarAguardar();
+                count += 1;
+                return false;
+            } 
+            
+            else {
+                setInterval(sumirMensagem, 5000)
+                erro = false;
+                break;
+            }
         }
+        
 
         console.log("FORM LOGIN: ", emailVar);
         console.log("FORM SENHA: ", senhaVar);

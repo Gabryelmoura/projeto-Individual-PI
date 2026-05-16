@@ -11,109 +11,433 @@
     <script src="./js/sessao.js"></script>
 
     <link rel="stylesheet" href="./css/jogos.css">
-    <link rel="icon" href="./assets/icon/favicon2.ico">
+    <link rel="icon" href="./assets/imagens/logo.png">
     <link rel="preconnect" href="https://fonts.gstatic.com">
 </head>
 
-<body>
+<body onload="onloadEsconder()">
     <!-- Cabecalho -->
-    <!--Header-->
-  <div class="header">
-    <div class="logo">
-      <h1>Nexium</h1>
+    <div class="header">
+        <div class="logo">
+            <h1>Nexium</h1>
+        </div>
+
+        <ul class="navbar">
+            <li>
+                <a href="./index.html">Inicial</a>
+            </li>
+
+            <li class="agora">
+                <a href="jogos.html">Jogos</a>
+            </li>
+
+            <li>|</li>
+
+            <li>
+                <a href="login.html">Login</a>
+            </li>
+
+            <li>
+                <a href="cadastro.html">Cadastro</a>
+            </li>
+        </ul>
     </div>
 
-    <ul class="navbar">
-      <li >
-        <a href="./index.html">Inicial</a>
-      </li>
-
-      <li class="agora">
-        <a href="jogos.html">Jogos</a>
-      </li>
-
-      <li>|</li>
-
-      <li>
-        <a href="login.html">Login</a>
-      </li>
-
-      <li>
-        <a href="cadastro.html">Cadastro</a>
-      </li>
-    </ul>
-  </div>
-
-    <!-- simulador inicio -->
+    <!-- sessão Conteudo Principal -->
     <div class="main">
+        <!-- Sessão Quiz -->
         <div class="container">
             <section id="quiz">
-              <div class="bloco-pergunta" id="bl-U" style="display: flex;">
-                <h2>Qual seu Genêro Favorito?</h2>
-                <div class="card">Ação</div>
-                <div class="card">Mistério</div>
-                <div class="card">Aventura</div>
-                <div class="card">Arcade</div>
-                <button onclick="enviar()">Proximo</button>
-              </div>
+                <div class="bloco-pergunta" id="bl-U" style="display: flex;">
+                    <h2>Qual seu Genêro Favorito?</h2>
+                    <div class="card">Ação</div>
+                    <div class="card">Mistério</div>
+                    <div class="card">Aventura</div>
+                    <div class="card">Arcade</div>
+                    <button onclick="enviar()">Proximo</button>
+                </div>
 
-              <div class="bloco-pergunta" id="bl-D" style="display: none;">
-                <h2>Qual seu Console de Preferência?</h2>
-                <div class="card">Super Nintendo</div>
-                <div class="card">Atari</div>
-                <div class="card">Game Boy Advance</div>
-                <div class="card">Play Station 1</div>
-                <button onclick="enviar2()">Proximo</button>
-              </div>
+                <div class="bloco-pergunta" id="bl-D" style="display: none;">
+                    <h2>Qual seu Console de Preferência?</h2>
+                    <div class="card">Super Nintendo</div>
+                    <div class="card">Atari</div>
+                    <div class="card">Game Boy Advance</div>
+                    <div class="card">Play Station 1</div>
+                    <button onclick="enviar2()">Proximo</button>
+                </div>
 
-              <div class="bloco-pergunta" id="bl-T" style="display: none;">
-                <h2>Qual seu Genêro Favorito?</h2>
-                <div class="card">Ação</div>
-                <div class="card">Mistério</div>
-                <div class="card">Aventura</div>
-                <div class="card">Arcade</div>
-                <button onclick="enviar3()">Proximo</button>
-              </div>
+                <div class="bloco-pergunta" id="bl-T" style="display: none;">
+                    <h2>Qual seu Genêro Favorito?</h2>
+                    <div class="card">Ação</div>
+                    <div class="card">Mistério</div>
+                    <div class="card">Aventura</div>
+                    <div class="card">Arcade</div>
+                    <button onclick="enviar3()">Proximo</button>
+                </div>
             </section>
 
             <section id="text-jogos">
-              <!-- <div class="card-txt"> -->
+                <!-- <div class="card-txt"> -->
                 <h2>Escolha um jogo com base nos seus gostos</h2>
 
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere quae in, sed dolorum magni eos necessitatibus iste quibusdam optio voluptatibus sequi aperiam fuga harum dolores quis nihil! Nam, repellendus id. Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, quisquam eveniet illo, perspiciatis quidem placeat atque aut sunt dolores necessitatibus inventore, minima odit suscipit nemo consectetur facilis ipsum nesciunt modi!</p>
-              <!-- </div> -->
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere quae in, sed dolorum magni eos
+                    necessitatibus iste quibusdam optio voluptatibus sequi aperiam fuga harum dolores quis nihil! Nam,
+                    repellendus id. Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, quisquam eveniet illo,
+                    perspiciatis quidem placeat atque aut sunt dolores necessitatibus inventore, minima odit suscipit
+                    nemo consectetur facilis ipsum nesciunt modi!</p>
+                <!-- </div> -->
             </section>
         </div>
 
-        <section id="jogos">
-          <div id="b_senha"></div>
+        <!-- Banner 1 -->
+        <div id="banner"></div>
+
+        <!-- Sessão Formulário Pergunta -->
+        <section id="formulario">
+            <div class="card-formulario">
+                <h2>Venham testar os seus conhecimentos: </h2>
+
+                <div class="txt-formulario">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati officia consectetur
+                        necessitatibus facere ab modi, ullam reiciendis nihil nulla placeat non nesciunt, illum harum
+                        quia amet fuga aspernatur suscipit expedita!</p>
+                </div>
+                <img src="assets/imgs/growth.png" alt="">
+            </div>
+
+            <div id="formulario-jogo">
+                <!-- Botoao Inicial para entrar no formulario -->
+                <div id="pontuacaoEJogo"><button id="btnIniciarQuiz" onclick="iniciarQuiz()">INICIAR QUIZ</button>
+
+                <!-- Quando Inicia de Fato o Formulário -->
+                <div id="jogo" class="flex-colunar border-secondary">
+                    <!-- Textos e Perguntas do Formulario -->
+                    <div id="informacao-formulario">
+                        <div id="infoQuestao">
+                            <span>Questão atual: <span id="spanNumeroDaQuestaoAtual"></span> de <span
+                                    id="qtdQuestoes"></span>
+                                questões.</span>
+                        </div>
+
+                        <div id="perguntaDaQuestaoAtual">
+                            <span id="spanQuestaoExibida" class="text-bold"></span>
+                        </div>
+
+                        <div id="infoAlternativas">
+                            <span><em>Escolha uma opção dentre as abaixo:</em></span>
+                        </div>
+                    </div>
+                    
+                    <!-- Opções para escolher -->
+                    <div id="opcoes" class="flex-colunar">
+                        <span>
+                            <input type="radio" id="primeiraOpcao" name="option" class="radio"
+                                value="alternativaA" />
+                            <label for="primeiraOpcao" class="option" id="labelOpcaoUm"></label>
+                        </span>
+                        <span>
+                            <input type="radio" id="segundaOpcao" name="option" class="radio"
+                                value="alternativaB" />
+                            <label for="segundaOpcao" class="option" id="labelOpcaoDois"></label>
+                        </span>
+                        <span>
+                            <input type="radio" id="terceiraOpcao" name="option" class="radio"
+                                value="alternativaC" />
+                            <label for="terceiraOpcao" class="option" id="labelOpcaoTres"></label>
+                        </span>
+                        <span>
+                            <input type="radio" id="quartaOpcao" name="option" class="radio" value="alternativaD" />
+                            <label for="quartaOpcao" class="option" id="labelOpcaoQuatro"></label>
+                        </span>
+                    </div>
+
+                    <!-- Botões para Continuar o Formulário -->
+                    <div id="botoes" class="flex-colunar">
+                        <!-- Botões -->
+                        <div id="botoes-formulario">
+                            <button onclick="submeter()" id="btnSubmeter">Submeter resposta</button>
+
+                            <button onclick="avancar()" id="btnProx" disabled>Avançar para próxima questão</ button>
+
+                            <!-- <button onclick="finalizar()" id="btnConcluir" disabled>Finalizar Quiz</button> -->
+
+                            <button onclick="tentarNovamente()" id="btnTentarNovamente" disabled>Tentar novamente</button>
+                        </div>
+
+                        <!-- Mensagem da Pontução -->
+                        <div id="pontuacao" class="flex-colunar border-primary">
+                            <div id="pontuacaoDuranteJogo" class="flex-colunar padding-8">
+                                <span class="width-fit-content">Quantidade de acertos: <span
+                                        id="spanCertas"></span></span><br>
+                                <span class="width-fit-content">Quantidade de erros: <span
+                                        id="spanErradas"></span></span>
+                            </div>
+
+                            <div id="pontuacaoFinalJogo" class="flex-colunar">
+                                <span id="pontuacaoFinal" class="width-fit-content">Pontuação Final: <span id="spanPontuacaoFinal">***</span>
+                                </span><br>
+                                <span id="msgFinal" class="width-fit-content">***</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
         </section>
     </div>
 
     <!-- Rodapé -->
     <div class="footer">
-    <div class="container">
-      <h1 class="titulo-footer">Nexium</h1>
+        <div class="container">
+            <h1 class="titulo-footer">Nexium</h1>
 
-      <div class="contato">
-        <ul>
-          <li>nexium@gmail.com</li>
-          <li>11 98977-9999</li>
-        </ul>
-      </div>
+            <div class="contato">
+                <ul>
+                    <li>nexium@gmail.com</li>
+                    <li>11 98977-9999</li>
+                </ul>
+            </div>
 
-      <div class="rede">
-        <ul>
-          <li>Instagram</li>
-          <li>Facebook</li>
-          <li>Git Hub</li>
-        </ul>
-      </div>
+            <div class="rede">
+                <ul>
+                    <li>Instagram</li>
+                    <li>Facebook</li>
+                    <li>Git Hub</li>
+                </ul>
+            </div>
+        </div>
     </div>
-  </div>
 </body>
+
 </html>
 
 <script>
-  
+    const listaDeQuestoes = [
+        {
+            pergunta: "Quando que ocorreu o evento que quase fez com que o mercado de jogos parassem ",
+            alternativaA: "1999",
+            alternativaB: "1983",
+            alternativaC: "1982",
+            alternativaD: "1993",
+            alternativaCorreta: "alternativaB"
+        },
+        {
+            pergunta: "Efeito utilizado para dar a impressão de profundidade?",
+            alternativaA: "Absolute",
+            alternativaB: "Fixed",
+            alternativaC: "Scrolling",
+            alternativaD: "Parallax",
+            alternativaCorreta: "alternativaD"
+        },
+        {
+            pergunta: "Quanto de memória RAM o console ATARI tem?",
+            alternativaA: "128 Bytes",
+            alternativaB: "16 bytes",
+            alternativaC: "32 bytes",
+            alternativaD: "64 bytes",
+            alternativaCorreta: "alternativaA"
+        },
+        {
+            pergunta: "Qual foi o movimento estético iniciado para preservar os gráficos dos jogos retro?",
+            alternativaA: "Filmes",
+            alternativaB: "Pirataria",
+            alternativaC: "Demakes",
+            alternativaD: "Remakes",
+            alternativaCorreta: "alternativaC"
+        },
+        {
+            pergunta: "Qual empresa foi responsavel por salvar os jogos retro?",
+            alternativaA: "Nintendo",
+            alternativaB: "XBOX",
+            alternativaC: "Play Station",
+            alternativaD: "Steam",
+            alternativaCorreta: "alternativaA"
+        }
+    ]
+
+    // variáveis globais    
+    let numeroDaQuestaoAtual = 0
+    let pontuacaoFinal = 0
+    let tentativaIncorreta = 0
+    let certas = 0
+    let erradas = 0
+    let quantidadeDeQuestoes = listaDeQuestoes.length
+    // let isUltima = numeroDaQuestaoAtual == quantidadeDeQuestoes-1 ? true : false
+
+    function onloadEsconder() {
+        document.getElementById('pontuacao').style.display = "none"
+        document.getElementById('jogo').style.display = "none"
+    }
+
+    function iniciarQuiz() {
+        document.getElementById('pontuacao').style.display = "flex"
+        document.getElementById('jogo').style.display = "flex"
+        document.getElementById('jogo').style.flexDirection = "column"
+
+        document.getElementById('formulario-jogo').style.boxShadow = "3px 3px 3px rgba(0, 0, 0, 0.33)"
+        
+        document.getElementById('btnIniciarQuiz').style.display = "none"
+        
+        document.getElementById('qtdQuestoes').innerHTML = quantidadeDeQuestoes
+
+        preencherHTMLcomQuestaoAtual(0)
+
+        btnSubmeter.disabled = false
+        btnProx.disabled = true
+        // btnConcluir.disabled = true
+        btnTentarNovamente.disabled = true
+    }
+
+    function preencherHTMLcomQuestaoAtual(index) {
+        habilitarAlternativas(true)
+        const questaoAtual = listaDeQuestoes[index]
+        numeroDaQuestaoAtual = index
+        console.log("questaoAtual")
+        console.log(questaoAtual)
+        document.getElementById("spanNumeroDaQuestaoAtual").innerHTML = Number(index) + 1 // ajustando porque o index começa em 0
+        document.getElementById("spanQuestaoExibida").innerHTML = questaoAtual.pergunta;
+        document.getElementById("labelOpcaoUm").innerHTML = questaoAtual.alternativaA;
+        document.getElementById("labelOpcaoDois").innerHTML = questaoAtual.alternativaB;
+        document.getElementById("labelOpcaoTres").innerHTML = questaoAtual.alternativaC;
+        document.getElementById("labelOpcaoQuatro").innerHTML = questaoAtual.alternativaD;
+    }
+
+    function submeter() {
+        const options = document.getElementsByName("option"); // recupera alternativas no html
+
+        let hasChecked = false
+        for (let i = 0; i < options.length; i++) {
+            if (options[i].checked) {
+                hasChecked = true
+                break
+            }
+        }
+
+        if (!hasChecked) {
+            alert("Não há alternativas escolhidas. Escolha uma opção.")
+        } else {
+            btnSubmeter.disabled = true
+            btnProx.disabled = false
+            habilitarAlternativas(false)
+
+            checarResposta()
+        }
+    }
+
+    function habilitarAlternativas(trueOrFalse) {
+        let opcaoEscolhida = trueOrFalse ? false : true
+
+        primeiraOpcao.disabled = opcaoEscolhida
+        segundaOpcao.disabled = opcaoEscolhida
+        terceiraOpcao.disabled = opcaoEscolhida
+        quartaOpcao.disabled = opcaoEscolhida
+
+    }
+
+    function avancar() {
+        btnProx.disabled = true
+        btnSubmeter.disabled = false
+
+        desmarcarRadioButtons()
+
+        if (numeroDaQuestaoAtual < quantidadeDeQuestoes - 1) {
+            preencherHTMLcomQuestaoAtual(numeroDaQuestaoAtual)
+        } else if (numeroDaQuestaoAtual == quantidadeDeQuestoes - 1) {
+            alert("Atenção... a próxima é a ultima questão!")
+            preencherHTMLcomQuestaoAtual(numeroDaQuestaoAtual)
+        } else {
+            finalizarJogo()
+        }
+        limparCoresBackgroundOpcoes()
+    }
+
+    function tentarNovamente() {
+        // atualiza a página
+        window.location.reload()
+    }
+
+    function checarResposta() {
+        const questaoAtual = listaDeQuestoes[numeroDaQuestaoAtual] // questão atual 
+        const respostaQuestaoAtual = questaoAtual.alternativaCorreta // qual é a resposta correta da questão atual
+
+        const options = document.getElementsByName("option"); // recupera alternativas no html
+
+        let alternativaCorreta = null // variável para armazenar a alternativa correta
+
+        options.forEach((option) => {
+            if (option.value === respostaQuestaoAtual) {
+                console.log("alternativaCorreta está no componente: " + alternativaCorreta)
+                alternativaCorreta = option.labels[0].id
+            }
+        })
+
+        // verifica se resposta assinalada é correta
+        options.forEach((option) => {
+            if (option.checked === true && option.value === respostaQuestaoAtual) {
+                document.getElementById(alternativaCorreta).classList.add("text-success-with-bg")
+                pontuacaoFinal++
+                certas++
+                document.getElementById("spanCertas").innerHTML = certas
+                numeroDaQuestaoAtual++
+            } else if (option.checked && option.value !== respostaQuestaoAtual) {
+                const wrongLabelId = option.labels[0].id
+
+                document.getElementById(wrongLabelId).classList.add("text-danger-with-bg")
+                document.getElementById(alternativaCorreta).classList.add("text-success-with-bg")
+                tentativaIncorreta++
+                erradas++
+                document.getElementById("spanErradas").innerHTML = erradas
+                numeroDaQuestaoAtual++
+            }
+        })
+    }
+
+    function limparCoresBackgroundOpcoes() {
+        const options = document.getElementsByName("option");
+        options.forEach((option) => {
+            document.getElementById(option.labels[0].id).classList.remove("text-danger-with-bg")
+            document.getElementById(option.labels[0].id).classList.remove("text-success-with-bg")
+        })
+    }
+
+    function desmarcarRadioButtons() {
+        const options = document.getElementsByName("option");
+        for (let i = 0; i < options.length; i++) {
+            options[i].checked = false;
+        }
+    }
+
+    function finalizarJogo() {
+        let textoParaMensagemFinal = null
+        let classComCoresParaMensagemFinal = null
+        const porcentagemFinalDeAcertos = pontuacaoFinal / quantidadeDeQuestoes
+
+        if (porcentagemFinalDeAcertos <= 0.3) {
+            textoParaMensagemFinal = "Parece que você não estudou..."
+            classComCoresParaMensagemFinal = "text-danger-with-bg"
+        }
+        else if (porcentagemFinalDeAcertos > 0.3 && porcentagemFinalDeAcertos < 0.9) {
+            textoParaMensagemFinal = "Pode melhorar na próxima, hein!"
+            classComCoresParaMensagemFinal = "text-warning-with-bg"
+        }
+        else if (porcentagemFinalDeAcertos >= 0.9) {
+            textoParaMensagemFinal = "Uau, parabéns!"
+            classComCoresParaMensagemFinal = "text-success-with-bg"
+        }
+
+        textoParaMensagemFinal += "<br> Você acertou " + Math.round((porcentagemFinalDeAcertos) * 100) + "% das questões."
+
+
+        document.getElementById('msgFinal').innerHTML = textoParaMensagemFinal
+        document.getElementById('msgFinal').classList.add(classComCoresParaMensagemFinal)
+        document.getElementById('spanPontuacaoFinal').innerHTML = pontuacaoFinal
+
+        document.getElementById('jogo').classList.add("text-new-gray")
+
+        btnProx.disabled = true
+        btnSubmeter.disabled = true
+        // btnConcluir.disabled = true
+        btnTentarNovamente.disabled = false
+
+    }
 </script>
