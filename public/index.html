@@ -51,7 +51,7 @@
 
   <!-- Banner -->
   <div class="banner">
-    <p>Seja bem-vindo ao seu <span>Blog</span> de <span>Games</span>.</p>
+    <p>Aproveite ao seu <span>Blog</span> de <span>Games</span>.</p>
   </div>
 
   <!-- Conteudo Principal -->
@@ -68,7 +68,7 @@
         A Salvação: A Nintendo lançou o Famicom (NES) com um selo de qualidade ("Nintendo Seal of Quality"), garantindo que apenas jogos licenciados e testados chegassem ao público, restaurando a credibilidade da indústria. </p>
       </div>
 
-      <img src="assets/imagens/image_selo_nintendo.png" alt="Imagem do selo da Nintendo">
+      <img src="assets/imagens/image_selo-Nintendo.png" alt="Imagem do selo da Nintendo">
     </div>
 
     <!-- Conteudo Desafio -->
@@ -226,7 +226,7 @@
     </div>
   </div>
 
-  <button id="subir"><a href="#header">TOP</a></button>
+  <button id="subir"><a href="#header"><img src="assets/seta-cima.png" alt="Seta Para Cima"></a></button>
 </body>
 </html>
 
@@ -241,11 +241,11 @@ function converter() {
 
     let bytes = 0;
 
-    if (unit === "B") {
+    if (unit == "B") {
         bytes = val;
-    } else if (unit === "MB") {
+    } else if (unit == "MB") {
         bytes = val * 1024 * 1024;
-    } else if (unit === "GB") {
+    } else if (unit == "GB") {
         bytes = val * 1024 * 1024 * 1024;
     }
 
@@ -254,7 +254,7 @@ function converter() {
 
     let intBytes = bytes - (bytes % 1);
     let divAtari = bytes / 128;
-    let atariQtd = ( (divAtari * 100) - ((divAtari * 100) % 1) ) / 100;
+    let atariQtd = ((divAtari * 100) - ((divAtari * 100) % 1)) / 100;
 
     resB.innerHTML = intBytes;
     resMB.innerHTML = mb.toFixed(6);

@@ -1,26 +1,22 @@
-> Blog Sobre Jogos Rêtro.
+> Nexium: Blog Sobre Jogos Rêtro.
 
 ---
 
 ## 📋 Sumário
 - [Sobre o Projeto]
 - [Tecnologias Utilizadas]
-- [Funcionalidades]
 - [Links Úteis]
-- [Autores]
+- [Autor]
 
 ## 💻 Sobre o Projeto
-Este software foi desenvolvido para apresentar jogos antigos que marcaram gerações para os novos usuários.
+Este Blog foi desenvolvido para apresentar jogos antigos que marcaram gerações para os novos usuários como uma forma de eternizar experiências para futuros interessados. Na Nexium, você poderá sanar dúvidas sobre tópicos relacionados as técnicas utilizadas para que o jogo pudesse ser jogado casualmente.
 
 ## 🛠 Tecnologias Utilizadas
 Uma lista das ferramentas e linguagens:
 * **Linguagens:** HTML5, CSS3, JavaScript, Sql
 * **Backend/Banco de Dados:** SQL Server, Node.js
+* **APIs:** Web-Data-Viz
 * **Ferramentas:** Git Hub, Trello, Figma, Visual Studio Code, MySql Workbanch, Oracle VirtualBox
-
-## ✨ Funcionalidades
-- [x] Comentários.
-- [ ] Gráficos de Acesso (em Andamento).
 
 ## 🔗 Links Uteis
 - Figma: https://www.figma.com/design/sNXlOCtiTAlFS5Pt8nWrIY/Projeto-PI---Individual?node-id=0-1&t=RkZTZJSukjqksbmP-1

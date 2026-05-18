@@ -120,10 +120,11 @@ h1{
 }
 
 .formulario {
-    height: 85%;
+    height: 89%;
     width: 80%;
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-direction: column;
 }
 

@@ -27,9 +27,7 @@
 
     <div class="login">
         <div class="container">
-            <div class="card card-login">
-                
-
+            <div class="card card-login">          
                 <div class="formulario"><h2>Login</h2>
                     <div class="campo">
                         <span>E-mail:</span>
@@ -40,6 +38,9 @@
                         <span>Senha:</span>
                         <input id="senha_input" type="password" placeholder="******">
                     </div>
+
+                    <p>Ainda não tem uma conta? <span ><a style="color: rgb(0, 136, 255); text-decoration: none;" href="cadastro.html">Clique Aqui</a></span></p>
+
                     <div style="color: red;" id="msg_Erro"></div>
 
                     <button class="botao" onclick="entrar()">Entrar</button>
@@ -88,41 +89,16 @@
         let count = 0;
         let erro = true;
         
-        while(erro == true){
-            if (emailVar == "" && senhaVar == "") {
-                msg_Erro.innerHTML = `Todos os campos em branco.<br>  ${count}`;
-                finalizarAguardar();
-                count += 1; 
-                return false;
-            } 
-            
-            else if(emailVar.includes('@') == false){
-                msg_Erro.innerHTML += `Email informado sem o @.<br> ${count}`;
-                finalizarAguardar();
-                count += 1;
-                return false;
-            }
-
-            else if(emailVar.includes('.gmail.com') == false){
-                msg_Erro.innerHTML += `Email informado sem o "gmail.com" <br> ${count}`;
-                finalizarAguardar();
-                count += 1;
-                return false;
-            } 
-            
-            else if(senhaVar.length < 6){
-                msg_Erro.innerHTML += `Senha precisa conter pelo menos 6 caracteres.<br> ${count}`;
-                finalizarAguardar();
-                count += 1;
-                return false;
-            } 
-            
-            else {
-                setInterval(sumirMensagem, 5000)
-                erro = false;
-                break;
-            }
-        }
+        // if (emailVar == "" && senhaVar == "") {
+        //     msg_Erro.innerHTML = `Todos os campos em branco. <br>  `;
+        //     finalizarAguardar();
+        //     return false;
+        // } 
+        
+        // else {
+        //     setInterval(sumirMensagem, 5000)
+        // }
+        
         
 
         console.log("FORM LOGIN: ", emailVar);

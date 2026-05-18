@@ -17,7 +17,7 @@
 
 <body onload="onloadEsconder()">
     <!-- Cabecalho -->
-    <div class="header">
+    <div id="header" class="header">
         <div class="logo">
             <h1>Nexium</h1>
         </div>
@@ -45,145 +45,228 @@
 
     <!-- sessão Conteudo Principal -->
     <div class="main">
+        <!-- Banner 1-->
+        <div id="banner">
+            <div class="opca">
+                <div class="txt-banner">
+                    <p class="titulo">Os reis dos <span>cartuchos</span> e dos <span>CDs</span></p>
+
+                    <p>Explore os títulos que definiram gerações, desafiaram os limites dos processadores e dominaram as
+                        locadoras e fliperamas.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sessão Escolher Video Game -->
+        <div id="escolher-games">
+            <h2>Selecione as Gerações</h2>
+
+            <div class="escolha">
+                <div class="gen" id="gen1">
+                    <h3>Era dos 8-bits</h3>
+
+                    <div class="card-game">
+                        <a href="">
+                            <img src="assets/imagens/NES.png" alt="Logo do NES">
+                        </a>
+
+                        <a href="">
+                            <img src="assets/imagens/MS.png" alt="Logo do Master System">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="gen" id="gen2">
+                    <h3>Era dos 16-bits</h3>
+
+                    <div class="card-game">
+                        <a href="">
+                            <img src="assets/imagens/SNES.png" alt="Logo do Super Nintendo">
+                        </a>
+
+                        <a href="">
+                            <img src="assets/imagens/MD.png" alt="Logo do Mega Drive">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="gen" id="gen3">
+                    <h3>Era dos 32/64-bits</h3>
+
+                    <div class="card-game">
+                        <a href="">
+                            <img src="assets/imagens/PS1.png" alt="Logo do Playstation 1">
+                        </a>
+                        
+                        <a href="">
+                            <img src="assets/imagens/N64.jpg" alt="Logo do Nintendo 64">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sessão Jogos Favoritos -->
+
         <!-- Sessão Quiz -->
         <div class="container">
             <section id="quiz">
                 <div class="bloco-pergunta" id="bl-U" style="display: flex;">
-                    <h2>Qual seu Genêro Favorito?</h2>
+                    <h2>Qual seu Gênero Favorito?</h2>
                     <div class="card">Ação</div>
                     <div class="card">Mistério</div>
                     <div class="card">Aventura</div>
                     <div class="card">Arcade</div>
                     <button onclick="enviar()">Proximo</button>
                 </div>
-
-                <div class="bloco-pergunta" id="bl-D" style="display: none;">
-                    <h2>Qual seu Console de Preferência?</h2>
-                    <div class="card">Super Nintendo</div>
-                    <div class="card">Atari</div>
-                    <div class="card">Game Boy Advance</div>
-                    <div class="card">Play Station 1</div>
-                    <button onclick="enviar2()">Proximo</button>
-                </div>
-
-                <div class="bloco-pergunta" id="bl-T" style="display: none;">
-                    <h2>Qual seu Genêro Favorito?</h2>
-                    <div class="card">Ação</div>
-                    <div class="card">Mistério</div>
-                    <div class="card">Aventura</div>
-                    <div class="card">Arcade</div>
-                    <button onclick="enviar3()">Proximo</button>
-                </div>
             </section>
 
             <section id="text-jogos">
                 <!-- <div class="card-txt"> -->
-                <h2>Escolha um jogo com base nos seus gostos</h2>
+                <h2>Descubra um jogo com base nos seus gostos</h2>
 
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere quae in, sed dolorum magni eos
-                    necessitatibus iste quibusdam optio voluptatibus sequi aperiam fuga harum dolores quis nihil! Nam,
-                    repellendus id. Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, quisquam eveniet illo,
+                    necessitatibus iste quibusdam optio voluptatibus sequi aperiam fuga harum dolores quis nihil!
+                    Nam,repellendus id. Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, quisquam eveniet
+                    illo,
                     perspiciatis quidem placeat atque aut sunt dolores necessitatibus inventore, minima odit suscipit
                     nemo consectetur facilis ipsum nesciunt modi!</p>
                 <!-- </div> -->
             </section>
         </div>
 
-        <!-- Banner 1 -->
-        <div id="banner"></div>
+        <!-- Banner 2 -->
+        <div id="banner2"></div>
 
         <!-- Sessão Formulário Pergunta -->
-        <section id="formulario">
+        <div id="formulario">
             <div class="card-formulario">
                 <h2>Venham testar os seus conhecimentos: </h2>
 
-                <div class="txt-formulario">
+                <!-- <div class="txt-formulario">
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati officia consectetur
                         necessitatibus facere ab modi, ullam reiciendis nihil nulla placeat non nesciunt, illum harum
                         quia amet fuga aspernatur suscipit expedita!</p>
-                </div>
-                <img src="assets/imgs/growth.png" alt="">
+                </div> -->
+                <img src="assets/imagens/per_MMZ_Zero.webp" alt="">
             </div>
 
             <div id="formulario-jogo">
                 <!-- Botoao Inicial para entrar no formulario -->
                 <div id="pontuacaoEJogo"><button id="btnIniciarQuiz" onclick="iniciarQuiz()">INICIAR QUIZ</button>
 
-                <!-- Quando Inicia de Fato o Formulário -->
-                <div id="jogo" class="flex-colunar border-secondary">
-                    <!-- Textos e Perguntas do Formulario -->
-                    <div id="informacao-formulario">
-                        <div id="infoQuestao">
-                            <span>Questão atual: <span id="spanNumeroDaQuestaoAtual"></span> de <span
-                                    id="qtdQuestoes"></span>
-                                questões.</span>
-                        </div>
-
-                        <div id="perguntaDaQuestaoAtual">
-                            <span id="spanQuestaoExibida" class="text-bold"></span>
-                        </div>
-
-                        <div id="infoAlternativas">
-                            <span><em>Escolha uma opção dentre as abaixo:</em></span>
-                        </div>
-                    </div>
-                    
-                    <!-- Opções para escolher -->
-                    <div id="opcoes" class="flex-colunar">
-                        <span>
-                            <input type="radio" id="primeiraOpcao" name="option" class="radio"
-                                value="alternativaA" />
-                            <label for="primeiraOpcao" class="option" id="labelOpcaoUm"></label>
-                        </span>
-                        <span>
-                            <input type="radio" id="segundaOpcao" name="option" class="radio"
-                                value="alternativaB" />
-                            <label for="segundaOpcao" class="option" id="labelOpcaoDois"></label>
-                        </span>
-                        <span>
-                            <input type="radio" id="terceiraOpcao" name="option" class="radio"
-                                value="alternativaC" />
-                            <label for="terceiraOpcao" class="option" id="labelOpcaoTres"></label>
-                        </span>
-                        <span>
-                            <input type="radio" id="quartaOpcao" name="option" class="radio" value="alternativaD" />
-                            <label for="quartaOpcao" class="option" id="labelOpcaoQuatro"></label>
-                        </span>
-                    </div>
-
-                    <!-- Botões para Continuar o Formulário -->
-                    <div id="botoes" class="flex-colunar">
-                        <!-- Botões -->
-                        <div id="botoes-formulario">
-                            <button onclick="submeter()" id="btnSubmeter">Submeter resposta</button>
-
-                            <button onclick="avancar()" id="btnProx" disabled>Avançar para próxima questão</ button>
-
-                            <!-- <button onclick="finalizar()" id="btnConcluir" disabled>Finalizar Quiz</button> -->
-
-                            <button onclick="tentarNovamente()" id="btnTentarNovamente" disabled>Tentar novamente</button>
-                        </div>
-
-                        <!-- Mensagem da Pontução -->
-                        <div id="pontuacao" class="flex-colunar border-primary">
-                            <div id="pontuacaoDuranteJogo" class="flex-colunar padding-8">
-                                <span class="width-fit-content">Quantidade de acertos: <span
-                                        id="spanCertas"></span></span><br>
-                                <span class="width-fit-content">Quantidade de erros: <span
-                                        id="spanErradas"></span></span>
+                    <!-- Quando Inicia de Fato o Formulário -->
+                    <div id="jogo" class="flex-colunar border-secondary">
+                        <!-- Textos e Perguntas do Formulario -->
+                        <div id="informacao-formulario">
+                            <div id="infoQuestao">
+                                <span>Questão atual: <span id="spanNumeroDaQuestaoAtual"></span> de <span
+                                        id="qtdQuestoes"></span>
+                                    questões.</span>
                             </div>
 
-                            <div id="pontuacaoFinalJogo" class="flex-colunar">
-                                <span id="pontuacaoFinal" class="width-fit-content">Pontuação Final: <span id="spanPontuacaoFinal">***</span>
-                                </span><br>
-                                <span id="msgFinal" class="width-fit-content">***</span>
+                            <div id="perguntaDaQuestaoAtual">
+                                <span id="spanQuestaoExibida" class="text-bold"></span>
+                            </div>
+
+                            <div id="infoAlternativas">
+                                <span><em>Escolha uma opção dentre as abaixo:</em></span>
+                            </div>
+                        </div>
+
+                        <!-- Opções para escolher -->
+                        <div id="opcoes" class="flex-colunar">
+                            <span>
+                                <input type="radio" id="primeiraOpcao" name="option" class="radio"
+                                    value="alternativaA" />
+                                <label for="primeiraOpcao" class="option" id="labelOpcaoUm"></label>
+                            </span>
+                            <span>
+                                <input type="radio" id="segundaOpcao" name="option" class="radio"
+                                    value="alternativaB" />
+                                <label for="segundaOpcao" class="option" id="labelOpcaoDois"></label>
+                            </span>
+                            <span>
+                                <input type="radio" id="terceiraOpcao" name="option" class="radio"
+                                    value="alternativaC" />
+                                <label for="terceiraOpcao" class="option" id="labelOpcaoTres"></label>
+                            </span>
+                            <span>
+                                <input type="radio" id="quartaOpcao" name="option" class="radio" value="alternativaD" />
+                                <label for="quartaOpcao" class="option" id="labelOpcaoQuatro"></label>
+                            </span>
+                        </div>
+
+                        <!-- Botões para Continuar o Formulário -->
+                        <div id="botoes" class="flex-colunar">
+                            <!-- Botões -->
+                            <div id="botoes-formulario">
+                                <button onclick="submeter()" id="btnSubmeter">Submeter resposta</button>
+
+                                <button onclick="avancar()" id="btnProx" disabled>Avançar para próxima questão</ button>
+
+                                    <!-- <button onclick="finalizar()" id="btnConcluir" disabled>Finalizar Quiz</button> -->
+
+                                    <button onclick="tentarNovamente()" id="btnTentarNovamente" disabled>Tentar
+                                        novamente</button>
+                            </div>
+
+                            <!-- Mensagem da Pontução -->
+                            <div id="pontuacao" class="flex-colunar border-primary">
+                                <div id="pontuacaoDuranteJogo" class="flex-colunar padding-8">
+                                    <span class="width-fit-content">Quantidade de acertos: <span
+                                            id="spanCertas"></span></span><br>
+                                    <span class="width-fit-content">Quantidade de erros: <span
+                                            id="spanErradas"></span></span>
+                                </div>
+
+                                <div id="pontuacaoFinalJogo" class="flex-colunar">
+                                    <span id="pontuacaoFinal" class="width-fit-content">Pontuação Final: <span
+                                            id="spanPontuacaoFinal">***</span>
+                                    </span><br>
+                                    <span id="msgFinal" class="width-fit-content">***</span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
                 </div>
             </div>
-        </section>
+        </div>
+
+        <!-- Banner 3 -->
+        <div id="banner3"></div>
+
+        <!-- Sessão Comentário Jogo Favorito
+        <div id="comentario">
+            <div class="container">
+                <h1>Publicar um aviso</h1>
+                <div class="div-form">
+                    <form id="form_postagem" method="post" onsubmit="return publicar()">
+                        <label>
+                            Título:
+                            <br>
+                            <input name="titulo" id="titulo" maxlength="100" type="text">
+                        </label>
+                        <br>
+                        <br>
+                        <label>
+                            Descrição (máximo de 250 caracteres):
+                            <br>
+                            <textarea name="descricao" id="textarea_descricao" maxlength="250" rows="5"></textarea>
+                        </label>
+                        <br>
+                        <br>
+                        <button>Enviar</button>
+                    </form>
+                </div>
+
+                <h1>Mural de Avisos</h1>
+                <div class="div-results">
+                    <div id="feed_container" class="feed-container">
+                    </div>
+                </div>
+            </div>
+        </div> -->
     </div>
 
     <!-- Rodapé -->
@@ -207,11 +290,14 @@
             </div>
         </div>
     </div>
+
+    <button id="subir"><a href="#header"><img src="assets/seta-cima.png" alt="Seta Para Cima"></a></button>
 </body>
 
 </html>
 
 <script>
+    // Inicio JS Quiz
     const listaDeQuestoes = [
         {
             pergunta: "Quando que ocorreu o evento que quase fez com que o mercado de jogos parassem ",
@@ -275,9 +361,9 @@
         document.getElementById('jogo').style.flexDirection = "column"
 
         document.getElementById('formulario-jogo').style.boxShadow = "3px 3px 3px rgba(0, 0, 0, 0.33)"
-        
+
         document.getElementById('btnIniciarQuiz').style.display = "none"
-        
+
         document.getElementById('qtdQuestoes').innerHTML = quantidadeDeQuestoes
 
         preencherHTMLcomQuestaoAtual(0)
@@ -440,4 +526,5 @@
         btnTentarNovamente.disabled = false
 
     }
+    // Fim JS Quiz
 </script>

@@ -97,7 +97,7 @@ h1{
 
 .card {
     background-color: white;
-    height: 450px;
+    height: 505px;
     width: 450px;
     padding: 10px 0px;
 
@@ -120,6 +120,7 @@ h1{
     height: 85%;
     width: 80%;
     justify-content: space-around;
+    align-items: center;
     flex-direction: column;
 }
 
