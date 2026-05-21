@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
    margin: 0px;
    padding: 0px;
@@ -237,14 +241,20 @@ li > a{
 .main > .container > #quiz{
     background-color: #333;
     width: 500px;
-    height: auto;
+    height: 500px;
     margin: 50px 0px;
     padding: 35px 0px;
     border-radius: 10px;
     color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.main > .container > #quiz > .bloco-pergunta{
+.main > .container > #quiz > #etapa_genero, 
+.main > .container > #quiz > #etapa_plataforma{
     width: 100%;
     height: 100%;
     
@@ -254,7 +264,8 @@ li > a{
     align-items: center;
 }
 
-.main > .container > #quiz > .bloco-pergunta > .card{
+.main > .container > #quiz > #etapa_genero > .card, 
+.main > .container > #quiz > #etapa_plataforma > .card{
     background-color: transparent;
     width: 85%;
     height: 60px;
@@ -262,6 +273,7 @@ li > a{
     padding: 10px;
 
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 
@@ -269,12 +281,13 @@ li > a{
     transition: all 0.3s ease-in-out;
 }
 
-.main > .container > #quiz > .bloco-pergunta > .card:hover{
+.main > .container > #quiz > #etapa_genero > .card:hover, 
+.main > .container > #quiz > #etapa_plataforma > .card:hover{
     transform: scale(1.03);
     background-color: rgb(233, 9, 233);
 }
 
-.main > .container > #quiz > .bloco-pergunta > button{
+.main > .container > #quiz > #etapa_plataforma > button{
     width: 150px;
     height: 65px;
     margin: 10px 0px;
@@ -284,7 +297,7 @@ li > a{
     border: none;
 }
 
-.main > .container > #quiz > .bloco-pergunta > button:hover{
+.main > .container > #quiz > #etapa_plataforma > button:hover{
     background-color: rgb(251, 55, 251);
     color: black;
 }
@@ -310,209 +323,15 @@ li > a{
     display: flex;
     justify-content: center;
     align-items: center;
-
-    background-image: url('../assets/imagens/banner_personagens.jpg');
+    background-attachment: fixed;
+    background-image: url('../assets/imagens/banner_SNES.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center
 }
 
-/* Estilização do Formulário de Pergunta */
-:root {
-    --primary-brand-color: #ED145B;
-    --secondary-brand-color: #0762C8;
-    --success: #198754;
-    --success-dark: #095c36;
-    --success-light: #9dd3ba;
-    --warning: #ffc107;
-    --warning-dark: #705400;
-    --warning-light: #fdebb3;
-    --danger: #dc3545;
-    --danger-dark: #990c19;
-    --danger-light: #f0c1c6;
-    --new-gray: #CCCCCC;
-    --new-black: #212427;
-    --new-white: #E8E8E8;
-}
-
-/* Estilização do Texto da Parte Formulário */
-.main > #formulario{
-    width: 100%;
-    height: 500px;
-    padding: 50px 0px;
-    background-color: white;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.main > #formulario > .card-formulario{
-    height: 450px;
-    width: 500px;
-    background-color: #333;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: rgb(233, 9, 233);
-    flex-direction: column;
-    font-family: 1.3em;
-}
-/*
-.main > #formulario > .card-formulario > .txt-formulario{ 
-}*/
-
-.main > #formulario > .card-formulario > img{
-    height: 410px;
-    width: 300px;
-    object-fit: cover;
-}
-
-/* Estilização do Formulário */
-#formulario-jogo{
-    height: 450px;
-    width: 800px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-size: cover;
-    border: 2px solid rgba(0, 0, 0, 0.548);
-    border-radius: 15px;
-    /* background-image: url('../assets/imagens/banner_nintendo.jpg'); */
-}
-
-#btnIniciarQuiz{
-    height: 75px;
-    width: 175px;
-}
-
-#jogo{ 
-    height: 450px;
-    width: 800px;
-}
-
-/* Estilização da Parte INFORMACAO-FORMULARIO */#informacao-formulario{
-    height: 175px;
-    width: 100%;
-    background-color: #333;
-    border-radius: 15px 15px 0px 0px;
-    color: white;
-}
-
-#infoQuestao{
-    height: 50px;
-    color: white;
-    margin-bottom: 20px;
-    background-color: rgb(233, 9, 233);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: 900;
-    border-radius: 15px 15px 0px 0px;
-}
-
-#spanQuestaoExibida{
-   margin: 15px;
-}
-
-#infoAlternativas{
-    margin: 15px;
-}
-
-/* Estilização da Parte OPCOES */
-#opcoes{
-    height: 80px;
-    width: 98%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    border-bottom: 2px solid black;
-    margin: 0 auto;
-}
-
-/* Estilização da Parte BOTOES */
-#botoes{
-    width: 100%;
-    height: 300px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-flow: row nowrap;
-}
-
-#botoes-formulario{
-    width: 45%;
-    height: 200px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-}
-
-#btnSubmeter{
-    background-color: white;
-    border: 2px solid rgb(233, 9, 233);
-    border-radius: 10px;
-    transition: all 0.3s ease-in-out;
-}
-
-#btnSubmeter:hover{
-    background-color: rgb(233, 9, 233);
-    border: 2px solid white;
-    transform: scale(1.05);
-}
-
-#btnProx, #btnConcluir, #btnTentarNovamente{
-    border: 2px solid rgb(233, 9, 233);
-    border-radius: 10px;
-}
-
-#btnProx:hover, #btnConcluir:hover, #btnTentarNovamente:hover{
-    border: 2px solid rgb(233, 9, 233);
-    border-radius: 10px;
-}
-
-#botoes-formulario > button{
-    width: 100%;
-    height: 60px;
-    font-family: Poppins;
-    color: black;
-}
-
-#pontuacao{
-    background-color: #d3d3d3;
-    width: 45%;
-    height: 200px;
-    display: flex;
-    flex-direction: column;
-}
-
-#pontuacaoDuranteJogo{
-    width: 100%;
-    height: 50%;
-    padding: 20px;
-}
-
-#pontuacaoFinalJogo{
-    width: 100%;
-    height: 50%;
-    padding: 0px 20px;
-}
-
-/* Estilização Antiga do Formulário */
-.text-success-with-bg {
-    background-color: var(--success-light);
-}
-
-.text-warning-with-bg {
-    background-color: var(--warning-light);
-}
-
-.text-danger-with-bg {
-    background-color: var(--danger-light);
-}
-
 /* Estilização do Banner 3 */
-#banner3{
+.main > #banner3{
     height: 300px;
     width: 100%;
 

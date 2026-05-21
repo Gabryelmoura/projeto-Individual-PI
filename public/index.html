@@ -17,7 +17,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
 </head>
 
-<body>
+<body  onload="onloadEsconder()">
   <!--Header-->
   <div id="header" class="header">
     <div class="logo">
@@ -31,10 +31,6 @@
 
       <li>
         <a href="#calc">Calculadora</a>
-      </li>
-
-      <li>
-        <a href="jogos.html">Jogos</a>
       </li>
 
       <li>|</li>
@@ -61,11 +57,16 @@
     <div class="introducao">
       <div class="introducao-texto">
         <h2>O Crash de 1983:</h2>
-        <p>No início dos anos 80, o mercado estava saturado. Qualquer empresa (até marcas de comida) tentava lançar jogos para o Atari 2600. O resultado foi uma enxurrada de títulos péssimos, culminando no desastroso jogo do E.T. <br><br>
+        <p>No início dos anos 80, o mercado estava saturado. Qualquer empresa (até marcas de comida) tentava lançar
+          jogos para o Atari 2600. O resultado foi uma enxurrada de títulos péssimos, culminando no desastroso jogo do
+          E.T. <br><br>
 
-        O Problema: A perda de confiança do consumidor. As lojas pararam de vender consoles, achando que videogames eram uma moda passageira que tinha morrido. <br><br>
+          O Problema: A perda de confiança do consumidor. As lojas pararam de vender consoles, achando que videogames
+          eram uma moda passageira que tinha morrido. <br><br>
 
-        A Salvação: A Nintendo lançou o Famicom (NES) com um selo de qualidade ("Nintendo Seal of Quality"), garantindo que apenas jogos licenciados e testados chegassem ao público, restaurando a credibilidade da indústria. </p>
+          A Salvação: A Nintendo lançou o Famicom (NES) com um selo de qualidade ("Nintendo Seal of Quality"),
+          garantindo que apenas jogos licenciados e testados chegassem ao público, restaurando a credibilidade da
+          indústria. </p>
       </div>
 
       <img src="assets/imagens/image_selo-Nintendo.png" alt="Imagem do selo da Nintendo">
@@ -77,11 +78,14 @@
       <div class="card">
         <div class="desafio-texto">
           <h2>Cores e Sombras no 8-bit:</h2>
-          <p>As paletas de cores eram muito limitadas (o NES, por exemplo, tinha cerca de 50 cores disponíveis). <br><br>
+          <p>As paletas de cores eram muito limitadas (o NES, por exemplo, tinha cerca de 50 cores disponíveis).
+            <br><br>
 
-          Design Funcional: Mario usa um macacão para que seus braços sejam visíveis contra o corpo, e um bigode para que o nariz seja identificado sem precisar desenhar uma boca detalhada. <br><br>
+            Design Funcional: Mario usa um macacão para que seus braços sejam visíveis contra o corpo, e um bigode para
+            que o nariz seja identificado sem precisar desenhar uma boca detalhada. <br><br>
 
-          O Truque: Como não havia degradê suave, usava-se o dithering (intercalar pixels de duas cores diferentes) para criar a ilusão de uma terceira cor ou sombra.</p>
+            O Truque: Como não havia degradê suave, usava-se o dithering (intercalar pixels de duas cores diferentes)
+            para criar a ilusão de uma terceira cor ou sombra.</p>
         </div>
         <img src="assets/imagens/image_mario.png" alt="Imagem explicando as cores">
       </div>
@@ -89,48 +93,54 @@
       <div id="calc" class="card">
         <div class="desafio-texto">
           <h2>O "Pulo do Gato" dos Processadores:</h2>
-          <p>Antigamente, memória não era medida em Gigabytes, mas em Bytes simples. O Atari 2600 tinha apenas 128 bytes de RAM (isso não dá para uma frase de texto hoje). <br><br>
+          <p>Antigamente, memória não era medida em Gigabytes, mas em Bytes simples. O Atari 2600 tinha apenas 128 bytes
+            de RAM (isso não dá para uma frase de texto hoje). <br><br>
 
-          A Mágica: Os programadores tinham que "desenhar" o jogo na TV linha por linha, em tempo real, enquanto o feixe de elétrons do tubo passava.  <br><br>
+            A Mágica: Os programadores tinham que "desenhar" o jogo na TV linha por linha, em tempo real, enquanto o
+            feixe de elétrons do tubo passava. <br><br>
 
-          O Legado: Essa escassez extrema forçou a criação de algoritmos de compressão e lógica de código que são a base da computação moderna. </p>
+            O Legado: Essa escassez extrema forçou a criação de algoritmos de compressão e lógica de código que são a
+            base da computação moderna. </p>
         </div>
       </div>
 
       <div class="calculadora">
-          <h2 style="color: rgb(233, 9, 233);">Calculadora de Memória</h2>
-    
-          <div class="formulario">
-            <input type="number" id="ipt_Value" value="128" oninput="converter()">
+        <h2 style="color: rgb(233, 9, 233);">Calculadora de Memória</h2>
 
-            <select id="ipt_Unit" onchange="converter()">
-                <option value="B">Bytes</option>
-                <option value="MB">Megabytes (MB)</option>
-                <option value="GB">Gigabytes (GB)</option>
-            </select>
-          </div>
+        <div class="formulario">
+          <input type="number" id="ipt_Value" value="128" oninput="converter()">
 
-          <div class="resultado">
-            <p><strong>Bytes:</strong> <span id="resB">128</span></p>
+          <select id="ipt_Unit" onchange="converter()">
+            <option value="B">Bytes</option>
+            <option value="MB">Megabytes (MB)</option>
+            <option value="GB">Gigabytes (GB)</option>
+          </select>
+        </div>
 
-            <p><strong>Megabytes:</strong> <span id="resMB">0.000122</span></p>
-            
-            <p><strong>Gigabytes:</strong> <span id="resGB">0.000000119</span></p>
-            
-            <hr>
-            
-            <p><strong>Decimal:</strong> <span id="resDec">128</span></p>
-            
-            <p><strong>Octal:</strong> <span id="resOct">200</span></p>
-            
-            <p><strong>Hexadecimal:</strong> <span id="resHex">80</span></p>
-            
-            <p id="atariCompare">
-                Isso equivale a 1 consoles Atari 2600.
-            </p>
-          </div>
+        <div class="resultado">
+          <p><strong>Bytes:</strong> <span id="resB">128</span></p>
+
+          <p><strong>Megabytes:</strong> <span id="resMB">0.000122</span></p>
+
+          <p><strong>Gigabytes:</strong> <span id="resGB">0.000000119</span></p>
+
+          <hr>
+
+          <p><strong>Decimal:</strong> <span id="resDec">128</span></p>
+
+          <p><strong>Octal:</strong> <span id="resOct">200</span></p>
+
+          <p><strong>Hexadecimal:</strong> <span id="resHex">80</span></p>
+
+          <p id="atariCompare">
+            Isso equivale a 1 consoles Atari 2600.
+          </p>
+        </div>
       </div>
     </div>
+
+    <!-- Banner 2 -->
+    <div class="banner2"></div>
 
     <!-- Conteudo Design -->
     <h1 style="margin: 50px 0px;">Design</h1>
@@ -140,9 +150,11 @@
           <h2>Limitações Criativas (Parallax Scrolling):</h2>
           <p>Até o início da era 16-bit, os fundos dos jogos eram estáticos. O Parallax mudou tudo.<br><br>
 
-          A Técnica: Consiste em mover as camadas do fundo em velocidades diferentes. O que está "longe" move devagar; o que está "perto" move rápido. <br><br>
-          
-          O Efeito: Isso engana o cérebro humano, criando uma sensação de profundidade 3D em um hardware que só conseguia processar imagens 2D planas. </p>
+            A Técnica: Consiste em mover as camadas do fundo em velocidades diferentes. O que está "longe" move devagar;
+            o que está "perto" move rápido. <br><br>
+
+            O Efeito: Isso engana o cérebro humano, criando uma sensação de profundidade 3D em um hardware que só
+            conseguia processar imagens 2D planas. </p>
         </div>
         <img src="assets/imagens/image_parallax.PNG" alt="Imagem explicando Parallax">
       </div>
@@ -152,9 +164,11 @@
           <h2>Narrativa Silenciosa: </h2>
           <p>Sem espaço para vídeos (cutscenes) ou diálogos extensos, os jogos usavam o design ambiental.<br><br>
 
-          Exemplo: Em Super Metroid, a solidão e o perigo são transmitidos pela trilha sonora melancólica e pela arquitetura hostil do planeta Zebes. <br><br>
-          
-          Show, don't tell: O jogador aprende a história observando estátuas antigas, naves destruídas e o comportamento dos inimigos, criando uma imersão muito mais profunda do que textos explicativos. </p>
+            Exemplo: Em Super Metroid, a solidão e o perigo são transmitidos pela trilha sonora melancólica e pela
+            arquitetura hostil do planeta Zebes. <br><br>
+
+            Show, don't tell: O jogador aprende a história observando estátuas antigas, naves destruídas e o
+            comportamento dos inimigos, criando uma imersão muito mais profunda do que textos explicativos. </p>
         </div>
       </div>
     </div>
@@ -164,17 +178,22 @@
     <div class="curiosidade">
       <div class="card">
         <img src="assets/imagens/image_skyblazer.jpg" alt="Imagem do jogo Skyblazer">
-        
+
         <div class="curiosidade-texto">
           <h2>Hidden Gems (Pérolas Escondidas):</h2>
-          <p>Com milhares de lançamentos para SNES e Mega Drive, muitos jogos incríveis falharam comercialmente por falta de marketing ou por saírem no fim da vida do console. <br><br>
+          <p>Com milhares de lançamentos para SNES e Mega Drive, muitos jogos incríveis falharam comercialmente por
+            falta de marketing ou por saírem no fim da vida do console. <br><br>
 
-          Exemplos clássicos: Skyblazer (SNES) ou The Misadventures of Flink (Mega Drive). <br><br>
-          
-          O Valor: Explorar esses jogos mostra que a biblioteca retrô é muito mais profunda do que apenas Mario, Sonic e Donkey Kong. </p>
+            Exemplos clássicos: Skyblazer (SNES) ou The Misadventures of Flink (Mega Drive). <br><br>
+
+            O Valor: Explorar esses jogos mostra que a biblioteca retrô é muito mais profunda do que apenas Mario, Sonic
+            e Donkey Kong. </p>
         </div>
       </div>
     </div>
+
+    <!-- Banner 3 -->
+    <div class="banner3"></div>
 
     <!-- Conteudo Legado -->
     <h1 style="margin: 50px 0px;">Legado</h1>
@@ -182,11 +201,14 @@
       <div class="card">
         <div class="legado-texto">
           <h2>Demakes:</h2>
-          <p>É um movimento artístico moderno onde desenvolvedores recriam jogos atuais usando as limitações técnicas de consoles antigos. <br><br>
+          <p>É um movimento artístico moderno onde desenvolvedores recriam jogos atuais usando as limitações técnicas de
+            consoles antigos. <br><br>
 
-          O Apelo: Ver como a complexidade de um Bloodborne se traduz nos polígonos serrilhados do PS1 evoca uma nostalgia estética única. <br><br>
-          
-          Exercício Mental: Isso prova que uma boa mecânica de jogo é atemporal, independente da contagem de polígonos. </p>
+            O Apelo: Ver como a complexidade de um Bloodborne se traduz nos polígonos serrilhados do PS1 evoca uma
+            nostalgia estética única. <br><br>
+
+            Exercício Mental: Isso prova que uma boa mecânica de jogo é atemporal, independente da contagem de
+            polígonos. </p>
         </div>
         <img src="assets/imagens/image_bloodborn.PNG" alt="">
       </div>
@@ -194,11 +216,98 @@
       <div class="card">
         <div class="legado-texto">
           <h2>Cenário de Emulação e Preservação:</h2>
-          <p>Jogos em cartuchos e consoles antigos estragam com o tempo (apodrecimento de trilhas e capacitores).<br><br>
+          <p>Jogos em cartuchos e consoles antigos estragam com o tempo (apodrecimento de trilhas e
+            capacitores).<br><br>
 
-          Preservação: A emulação em dispositivos como Raspberry Pi ou portáteis chineses (Miyoo Mini, Anbernic) não é apenas sobre "jogar de graça", mas sobre manter viva a história do software. <br><br>
-          
-          A Ética: O debate sobre empresas que não vendem mais seus jogos clássicos, mas processam quem tenta preservá-los através de ROMs. </p>
+            Preservação: A emulação em dispositivos como Raspberry Pi ou portáteis chineses (Miyoo Mini, Anbernic) não é
+            apenas sobre "jogar de graça", mas sobre manter viva a história do software. <br><br>
+
+            A Ética: O debate sobre empresas que não vendem mais seus jogos clássicos, mas processam quem tenta
+            preservá-los através de ROMs. </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sessão Formulário Pergunta -->
+    <div id="formulario">
+      <div class="card-formulario">
+        <h2>Venham testar os seus conhecimentos: </h2>
+
+        <img src="assets/imagens/per_MMZ_Zero.webp" alt="">
+      </div>
+
+      <div id="formulario-jogo">
+        <!-- Botoao Inicial para entrar no formulario -->
+        <div id="pontuacaoEJogo"><button id="btnIniciarQuiz" onclick="iniciarQuiz()">INICIAR QUIZ</button>
+
+          <!-- Quando Inicia de Fato o Formulário -->
+          <div id="jogo" class="flex-colunar border-secondary">
+            <!-- Textos e Perguntas do Formulario -->
+            <div id="informacao-formulario">
+              <div id="infoQuestao">
+                <span>Questão atual: <span id="spanNumeroDaQuestaoAtual"></span> de <span id="qtdQuestoes"></span>
+                  questões.</span>
+              </div>
+
+              <div id="perguntaDaQuestaoAtual">
+                <span id="spanQuestaoExibida" class="text-bold"></span>
+              </div>
+
+              <div id="infoAlternativas">
+                <span><em>Escolha uma opção dentre as abaixo:</em></span>
+              </div>
+            </div>
+
+            <!-- Opções para escolher -->
+            <div id="opcoes" class="flex-colunar">
+              <span>
+                <input type="radio" id="primeiraOpcao" name="option" class="radio" value="alternativaA" />
+                <label for="primeiraOpcao" class="option" id="labelOpcaoUm"></label>
+              </span>
+              <span>
+                <input type="radio" id="segundaOpcao" name="option" class="radio" value="alternativaB" />
+                <label for="segundaOpcao" class="option" id="labelOpcaoDois"></label>
+              </span>
+              <span>
+                <input type="radio" id="terceiraOpcao" name="option" class="radio" value="alternativaC" />
+                <label for="terceiraOpcao" class="option" id="labelOpcaoTres"></label>
+              </span>
+              <span>
+                <input type="radio" id="quartaOpcao" name="option" class="radio" value="alternativaD" />
+                <label for="quartaOpcao" class="option" id="labelOpcaoQuatro"></label>
+              </span>
+            </div>
+
+            <!-- Botões para Continuar o Formulário -->
+            <div id="botoes" class="flex-colunar">
+              <!-- Botões -->
+              <div id="botoes-formulario">
+                <button onclick="submeter()" id="btnSubmeter">Submeter resposta</button>
+
+                <button onclick="avancar()" id="btnProx" disabled>Avançar para próxima questão</ button>
+
+                  <!-- <button onclick="finalizar()" id="btnConcluir" disabled>Finalizar Quiz</button> -->
+
+                  <button onclick="tentarNovamente()" id="btnTentarNovamente" disabled>Tentar
+                    novamente</button>
+              </div>
+
+              <!-- Mensagem da Pontução -->
+              <div id="pontuacao" class="flex-colunar border-primary">
+                <div id="pontuacaoDuranteJogo" class="flex-colunar padding-8">
+                  <span class="width-fit-content">Quantidade de acertos: <span id="spanCertas"></span></span><br>
+                  <span class="width-fit-content">Quantidade de erros: <span id="spanErradas"></span></span>
+                </div>
+
+                <div id="pontuacaoFinalJogo" class="flex-colunar">
+                  <span id="pontuacaoFinal" class="width-fit-content">Pontuação Final: <span
+                      id="spanPontuacaoFinal">***</span>
+                  </span><br>
+                  <span id="msgFinal" class="width-fit-content">***</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -228,25 +337,26 @@
 
   <button id="subir"><a href="#header"><img src="assets/seta-cima.png" alt="Seta Para Cima"></a></button>
 </body>
+
 </html>
 
 <script>
-function converter() {
+  function converter() {
     let val = Number(ipt_Value.value);
     let unit = ipt_Unit.value;
-    
-    if (isNaN(val)){
+
+    if (isNaN(val)) {
       alert("Informe um valor Numérico.")
     };
 
     let bytes = 0;
 
     if (unit == "B") {
-        bytes = val;
+      bytes = val;
     } else if (unit == "MB") {
-        bytes = val * 1024 * 1024;
+      bytes = val * 1024 * 1024;
     } else if (unit == "GB") {
-        bytes = val * 1024 * 1024 * 1024;
+      bytes = val * 1024 * 1024 * 1024;
     }
 
     let mb = bytes / (1024 * 1024);
@@ -259,11 +369,242 @@ function converter() {
     resB.innerHTML = intBytes;
     resMB.innerHTML = mb.toFixed(6);
     resGB.innerHTML = gb.toFixed(9);
-    
+
     resDec.innerHTML = intBytes;
     resOct.innerHTML = intBytes.toString(8);
     resHex.innerHTML = intBytes.toString(16).toUpperCase();
 
     atariCompare.innerHTML = "Isso equivale a " + atariQtd + " consoles Atari 2600.";
-}
+  }
+
+  // Inicio JS Quiz
+  const listaDeQuestoes = [
+    {
+      pergunta: "Quando que ocorreu o evento que quase fez com que o mercado de jogos parassem ",
+      alternativaA: "1999",
+      alternativaB: "1983",
+      alternativaC: "1982",
+      alternativaD: "1993",
+      alternativaCorreta: "alternativaB"
+    },
+    {
+      pergunta: "Efeito utilizado para dar a impressão de profundidade?",
+      alternativaA: "Absolute",
+      alternativaB: "Fixed",
+      alternativaC: "Scrolling",
+      alternativaD: "Parallax",
+      alternativaCorreta: "alternativaD"
+    },
+    {
+      pergunta: "Quanto de memória RAM o console ATARI tem?",
+      alternativaA: "128 Bytes",
+      alternativaB: "16 bytes",
+      alternativaC: "32 bytes",
+      alternativaD: "64 bytes",
+      alternativaCorreta: "alternativaA"
+    },
+    {
+      pergunta: "Qual foi o movimento estético iniciado para preservar os gráficos dos jogos retro?",
+      alternativaA: "Filmes",
+      alternativaB: "Pirataria",
+      alternativaC: "Demakes",
+      alternativaD: "Remakes",
+      alternativaCorreta: "alternativaC"
+    },
+    {
+      pergunta: "Qual empresa foi responsavel por salvar os jogos retro?",
+      alternativaA: "Nintendo",
+      alternativaB: "XBOX",
+      alternativaC: "Play Station",
+      alternativaD: "Steam",
+      alternativaCorreta: "alternativaA"
+    }
+  ]
+
+  // variáveis globais    
+  let numeroDaQuestaoAtual = 0
+  let pontuacaoFinal = 0
+  let tentativaIncorreta = 0
+  let certas = 0
+  let erradas = 0
+  let quantidadeDeQuestoes = listaDeQuestoes.length
+  // let isUltima = numeroDaQuestaoAtual == quantidadeDeQuestoes-1 ? true : false
+
+  function onloadEsconder() {
+    document.getElementById('pontuacao').style.display = "none"
+    document.getElementById('jogo').style.display = "none"
+  }
+
+  function iniciarQuiz() {
+    document.getElementById('pontuacao').style.display = "flex"
+    document.getElementById('jogo').style.display = "flex"
+    document.getElementById('jogo').style.flexDirection = "column"
+
+    document.getElementById('formulario-jogo').style.boxShadow = "3px 3px 3px rgba(0, 0, 0, 0.33)"
+
+    document.getElementById('btnIniciarQuiz').style.display = "none"
+
+    document.getElementById('qtdQuestoes').innerHTML = quantidadeDeQuestoes
+
+    preencherHTMLcomQuestaoAtual(0)
+
+    btnSubmeter.disabled = false
+    btnProx.disabled = true
+    // btnConcluir.disabled = true
+    btnTentarNovamente.disabled = true
+  }
+
+  function preencherHTMLcomQuestaoAtual(index) {
+    habilitarAlternativas(true)
+    const questaoAtual = listaDeQuestoes[index]
+    numeroDaQuestaoAtual = index
+    console.log("questaoAtual")
+    console.log(questaoAtual)
+    document.getElementById("spanNumeroDaQuestaoAtual").innerHTML = Number(index) + 1 // ajustando porque o index começa em 0
+    document.getElementById("spanQuestaoExibida").innerHTML = questaoAtual.pergunta;
+    document.getElementById("labelOpcaoUm").innerHTML = questaoAtual.alternativaA;
+    document.getElementById("labelOpcaoDois").innerHTML = questaoAtual.alternativaB;
+    document.getElementById("labelOpcaoTres").innerHTML = questaoAtual.alternativaC;
+    document.getElementById("labelOpcaoQuatro").innerHTML = questaoAtual.alternativaD;
+  }
+
+  function submeter() {
+    const options = document.getElementsByName("option"); // recupera alternativas no html
+
+    let hasChecked = false
+    for (let i = 0; i < options.length; i++) {
+      if (options[i].checked) {
+        hasChecked = true
+        break
+      }
+    }
+
+    if (!hasChecked) {
+      alert("Não há alternativas escolhidas. Escolha uma opção.")
+    } else {
+      btnSubmeter.disabled = true
+      btnProx.disabled = false
+      habilitarAlternativas(false)
+
+      checarResposta()
+    }
+  }
+
+  function habilitarAlternativas(trueOrFalse) {
+    let opcaoEscolhida = trueOrFalse ? false : true
+
+    primeiraOpcao.disabled = opcaoEscolhida
+    segundaOpcao.disabled = opcaoEscolhida
+    terceiraOpcao.disabled = opcaoEscolhida
+    quartaOpcao.disabled = opcaoEscolhida
+
+  }
+
+  function avancar() {
+    btnProx.disabled = true
+    btnSubmeter.disabled = false
+
+    desmarcarRadioButtons()
+
+    if (numeroDaQuestaoAtual < quantidadeDeQuestoes - 1) {
+      preencherHTMLcomQuestaoAtual(numeroDaQuestaoAtual)
+    } else if (numeroDaQuestaoAtual == quantidadeDeQuestoes - 1) {
+      alert("Atenção... a próxima é a ultima questão!")
+      preencherHTMLcomQuestaoAtual(numeroDaQuestaoAtual)
+    } else {
+      finalizarJogo()
+    }
+    limparCoresBackgroundOpcoes()
+  }
+
+  function tentarNovamente() {
+    // atualiza a página
+    window.location.reload()
+  }
+
+  function checarResposta() {
+    const questaoAtual = listaDeQuestoes[numeroDaQuestaoAtual] // questão atual 
+    const respostaQuestaoAtual = questaoAtual.alternativaCorreta // qual é a resposta correta da questão atual
+
+    const options = document.getElementsByName("option"); // recupera alternativas no html
+
+    let alternativaCorreta = null // variável para armazenar a alternativa correta
+
+    options.forEach((option) => {
+      if (option.value === respostaQuestaoAtual) {
+        console.log("alternativaCorreta está no componente: " + alternativaCorreta)
+        alternativaCorreta = option.labels[0].id
+      }
+    })
+
+    // verifica se resposta assinalada é correta
+    options.forEach((option) => {
+      if (option.checked === true && option.value === respostaQuestaoAtual) {
+        document.getElementById(alternativaCorreta).classList.add("text-success-with-bg")
+        pontuacaoFinal++
+        certas++
+        document.getElementById("spanCertas").innerHTML = certas
+        numeroDaQuestaoAtual++
+      } else if (option.checked && option.value !== respostaQuestaoAtual) {
+        const wrongLabelId = option.labels[0].id
+
+        document.getElementById(wrongLabelId).classList.add("text-danger-with-bg")
+        document.getElementById(alternativaCorreta).classList.add("text-success-with-bg")
+        tentativaIncorreta++
+        erradas++
+        document.getElementById("spanErradas").innerHTML = erradas
+        numeroDaQuestaoAtual++
+      }
+    })
+  }
+
+  function limparCoresBackgroundOpcoes() {
+    const options = document.getElementsByName("option");
+    options.forEach((option) => {
+      document.getElementById(option.labels[0].id).classList.remove("text-danger-with-bg")
+      document.getElementById(option.labels[0].id).classList.remove("text-success-with-bg")
+    })
+  }
+
+  function desmarcarRadioButtons() {
+    const options = document.getElementsByName("option");
+    for (let i = 0; i < options.length; i++) {
+      options[i].checked = false;
+    }
+  }
+
+  function finalizarJogo() {
+    let textoParaMensagemFinal = null
+    let classComCoresParaMensagemFinal = null
+    const porcentagemFinalDeAcertos = pontuacaoFinal / quantidadeDeQuestoes
+
+    if (porcentagemFinalDeAcertos <= 0.3) {
+      textoParaMensagemFinal = "Parece que você não estudou..."
+      classComCoresParaMensagemFinal = "text-danger-with-bg"
+    }
+    else if (porcentagemFinalDeAcertos > 0.3 && porcentagemFinalDeAcertos < 0.9) {
+      textoParaMensagemFinal = "Pode melhorar na próxima, hein!"
+      classComCoresParaMensagemFinal = "text-warning-with-bg"
+    }
+    else if (porcentagemFinalDeAcertos >= 0.9) {
+      textoParaMensagemFinal = "Uau, parabéns!"
+      classComCoresParaMensagemFinal = "text-success-with-bg"
+    }
+
+    textoParaMensagemFinal += "<br> Você acertou " + Math.round((porcentagemFinalDeAcertos) * 100) + "% das questões."
+
+
+    document.getElementById('msgFinal').innerHTML = textoParaMensagemFinal
+    document.getElementById('msgFinal').classList.add(classComCoresParaMensagemFinal)
+    document.getElementById('spanPontuacaoFinal').innerHTML = pontuacaoFinal
+
+    document.getElementById('jogo').classList.add("text-new-gray")
+
+    btnProx.disabled = true
+    btnSubmeter.disabled = true
+    // btnConcluir.disabled = true
+    btnTentarNovamente.disabled = false
+
+  }
+  // Fim JS Quiz
 </script>
