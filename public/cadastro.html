@@ -16,7 +16,6 @@
 </head>
 
 <body onload="listar()">
-  <!-- header inicio -->
   <div class="header">
     <button class="voltar"><a class="link-voltar" href="./index.html">Voltar</a></button>
 
@@ -24,8 +23,6 @@
       <h1>Nexium</h1>
     </div>
   </div>
-  <!-- header fim-->
-
   <div class="alerta_erro">
     <div class="card_erro" id="cardErro">
       <span id="mensagem_erro"></span>
@@ -60,7 +57,7 @@
             <input id="confirmacao_senha_input" type="password" placeholder="******" />
           </div>
 
-          <p>Já tem uma conta? <span ><a style="color: rgb(0, 136, 255); text-decoration: none;" href="login.html">Clique Aqui</a></span></p>
+          <p>Já tem uma conta? <span><a style="color: rgb(0, 136, 255); text-decoration: none;" href="login.html">Clique Aqui</a></span></p>
 
           <button class="botao" onclick="cadastrar()">Cadastrar</button>
 
@@ -75,7 +72,6 @@
     </div>
   </div>
 
-  <!-- Rodapé -->
   <div class="footer">
     <div class="container">
       <h1 class="titulo-footer">Nexium</h1>
@@ -91,7 +87,7 @@
         <ul>
           <li>Instagram</li>
           <li>Facebook</li>
-          <li>Git Hub</li>
+          <li>GitHub</li>
         </ul>
       </div>
     </div>
@@ -104,36 +100,58 @@
   function cadastrar() {
     // aguardar();
 
-    //Recupere o valor da nova input pelo nome do id
-    // Agora vá para o método fetch logo abaixo
     var nomeVar = nome_input.value;
     var emailVar = email_input.value;
     var senhaVar = senha_input.value;
     var confirmacaoSenhaVar = confirmacao_senha_input.value;
 
-    // Verificando se há algum campo em branco
-    if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
-      cardErro.style.display = "block";
-      mensagem_erro.innerHTML =
-        "(Mensagem de erro para todos os campos em branco)";
+    var campos = [
+      { valor: nomeVar, nome: "Nome", tipo: "comum" },
+      { valor: emailVar, nome: "E-mail", tipo: "email" },
+      { valor: senhaVar, nome: "Senha", tipo: "senha" },
+      { valor: confirmacaoSenhaVar, nome: "Confirmação da Senha", tipo: "confirmacao" }
+    ];
 
-      finalizarAguardar();
+    var erros = [];
+    for (var i = 0; i < campos.length; i++) {
+      var campoAtual = campos[i];
+
+      if (campoAtual.valor == "") {
+        erros.push(`O campo <b>${campoAtual.nome}</b> não pode estar vazio.`);
+        continue;
+      }
+
+      if (campoAtual.tipo === "email" && !campoAtual.valor.includes("@gmail")) {
+        erros.push("O campo <b>E-mail</b> deve conter '@gmail'.");
+      }
+
+      if (campoAtual.tipo === "senha" && campoAtual.valor.length < 6) {
+        erros.push("A <b>Senha</b> deve conter pelo menos 6 caracteres.");
+      }
+
+      if (campoAtual.tipo === "confirmacao" && campoAtual.valor !== senhaVar) {
+        erros.push("A <b>Confirmação da Senha</b> não coincide com a senha digitada.");
+      }
+    }
+
+    if (erros.length > 0) {
+      cardErro.style.display = "block";
+      mensagem_erro.innerHTML = erros.join("<br>");
+
+      if (typeof finalizarAguardar === "function") {
+        finalizarAguardar();
+      }
       return false;
-    } 
-    
-    else {
+    } else {
       setInterval(sumirMensagem, 5000);
     }
 
-    // Enviando o valor da nova input
     fetch("/usuarios/cadastrar", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        // crie um atributo que recebe o valor recuperado aqui
-        // Agora vá para o arquivo routes/usuario.js
         nomeServer: nomeVar,
         emailServer: emailVar,
         senhaServer: senhaVar,
@@ -146,7 +164,7 @@
           cardErro.style.display = "block";
 
           mensagem_erro.innerHTML =
-            "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+            "Cadastro realizado com sucesso! Redirecionando para a tela de Login...";
 
           setTimeout(() => {
             window.location = "login.html";

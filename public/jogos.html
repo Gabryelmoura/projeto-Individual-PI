@@ -16,198 +16,158 @@
 </head>
 
 <body onload="validarSessao2()">
-    <!-- Cabecalho -->
-    <div id="header" class="header">
-        <div class="logo">
-            <h1>Nexium</h1>
+    <div class="janela">
+        <div class="header-left">
+                <h1>Nexium</h1>
+
+                <div class="hello">
+                    <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
+                    </div>
+
+                <div class="btn-nav">
+                    <h3>Jogos</h3>
+
+                </div>
+
+                <div class="btn-nav-white">
+                    <a href="dashboard/dashboard.html">
+                        <h3>Gráficos</h3>
+                    </a>
+                </div>
+
+                <div class="btn-nav-white">
+                    <a href="dashboard/comentario.html">
+                        <h3>Comentários</h3>
+                    </a>
+                </div>
+
+                <hr>
+
+                <div class="btn-logout" onclick="limparSessao()">
+                    <h3>Sair</h3>
+                </div>
         </div>
 
-        <ul class="navbar">
-            <li>
-                <a href="./index.html">Inicial</a>
-            </li>
+        <div class="cont">
+            <div class="main">
+                <div id="banner">
+                    <div class="opca">
+                        <div class="txt-banner">
+                            <p class="titulo">Os reis dos <span>cartuchos</span> e dos <span>CDs</span></p>
 
-            <li class="agora">
-                <a href="jogos.html">Jogos</a>
-            </li>
+                            <p>Explore os títulos que definiram gerações, desafiaram os limites dos processadores e dominaram as
+                                locadoras e fliperamas.</p>
+                        </div>
+                    </div>
+                </div>
 
-            <li>|</li>
+                <div id="escolher-games">
+                    <h2>Selecione as Gerações</h2>
 
-            <li>
-                <a href="login.html">Login</a>
-            </li>
+                    <div class="escolha">
+                        <div class="gen" id="gen1">
+                            <h3>Era dos 8-bits</h3>
 
-            <li>
-                <a href="cadastro.html">Cadastro</a>
-            </li>
-        </ul>
+                            <div class="card-game">
+                                <a href="#">
+                                    <img src="assets/imagens/NES.png" alt="Logo do NES">
+                                </a>
+
+                                <a href="#">
+                                    <img src="assets/imagens/MS.png" alt="Logo do Master System">
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="gen" id="gen2">
+                            <h3>Era dos 16-bits</h3>
+
+                            <div class="card-game">
+                                <a href="#">
+                                    <img src="assets/imagens/SNES.png" alt="Logo do Super Nintendo">
+                                </a>
+
+                                <a href="#">
+                                    <img src="assets/imagens/MD.png" alt="Logo do Mega Drive">
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="gen" id="gen3">
+                            <h3>Era dos 32/64-bits</h3>
+
+                            <div class="card-game">
+                                <a href="#">
+                                    <img src="assets/imagens/N64.jpg" alt="Logo do Nintendo 64">
+                                </a>
+
+                                <a href="#">
+                                    <img src="assets/imagens/PS1.png" alt="Logo do PlayStation 1">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <section id="quiz">
+                        <div id="etapa_genero">
+                            <h2>Qual seu Gênero Favorito?</h2>
+                            <div class="card" onclick="selecionarGenero('Ação')">Ação</div>
+                            <div class="card" onclick="selecionarGenero('Mistério')">Mistério</div>
+                            <div class="card" onclick="selecionarGenero('Terror')">Terror</div>
+                            <div class="card" onclick="selecionarGenero('RPG')">RPG</div>
+                        </div>
+
+                        <div id="etapa_plataforma" style="display: none;">
+                            <h2>Qual sua Plataforma?</h2>
+                            <div class="card" id="card_snes" onclick="selecionarPlataforma('SNES', 'snes')">SNES</div>
+                            <div class="card" id="card_ps1" onclick="selecionarPlataforma('PS1', 'ps1')">PS1</div>
+                            <div class="card" id="card_n64" onclick="selecionarPlataforma('N64', 'n64')">N64</div>
+                            <div class="card" id="card_nes" onclick="selecionarPlataforma('NES', 'nes')">NES</div>
+                            <button onclick="enviar()">Ver Resultado</button>
+                            
+                            <div id="div_resultado"></div>
+                            <div id="div_botoes"></div>
+                        </div>
+                    </section>
+
+                    <section id="text-jogos">
+                        <h2>Descubra um jogo com base nos seus gostos</h2>
+
+                        <p>Gostava de saber qual será a sua próxima aventura retro? Com tantas opções clássicas em cartucho ou CD, facilitamos a sua escolha.</p>
+    
+                        <p>Selecione o seu género ou de jogabilidade favorito e a plataforma que prefere utilizar. O nosso sistema vai cruzar as suas preferências para recomendar a pérola ideal para a sua próxima gameplay. Teste as combinações ao lado!</p>
+                    </section>
+                </div>
+
+                <div id="banner2"></div>
+            </div>
+
+            <div class="footer">
+                <div class="container">
+                    <h1 class="titulo-footer">Nexium</h1>
+
+                    <div class="contato">
+                        <ul>
+                            <li>nexium@gmail.com</li>
+                            <li>11 98977-9999</li>
+                        </ul>
+                    </div>
+
+                    <div class="rede">
+                        <ul>
+                            <li>Instagram</li>
+                            <li>Facebook</li>
+                            <li>GitHub</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <button id="subir"><a href="#banner"><img src="assets/seta-cima.png" alt="Seta Para Cima"></a></button>
+        </div>        
     </div>
-
-    <!-- sessão Conteudo Principal -->
-    <div class="main">
-        <!-- Banner 1-->
-        <div id="banner">
-            <div class="opca">
-                <div class="txt-banner">
-                    <p class="titulo">Os reis dos <span>cartuchos</span> e dos <span>CDs</span></p>
-
-                    <p>Explore os títulos que definiram gerações, desafiaram os limites dos processadores e dominaram as
-                        locadoras e fliperamas.</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Sessão Escolher Video Game -->
-        <div id="escolher-games">
-            <h2>Selecione as Gerações</h2>
-
-            <div class="escolha">
-                <div class="gen" id="gen1">
-                    <h3>Era dos 8-bits</h3>
-
-                    <div class="card-game">
-                        <a href="#">
-                            <img src="assets/imagens/NES.png" alt="Logo do NES">
-                        </a>
-
-                        <a href="#">
-                            <img src="assets/imagens/MS.png" alt="Logo do Master System">
-                        </a>
-                    </div>
-                </div>
-
-                <div class="gen" id="gen2">
-                    <h3>Era dos 16-bits</h3>
-
-                    <div class="card-game">
-                        <a href="#">
-                            <img src="assets/imagens/SNES.png" alt="Logo do Super Nintendo">
-                        </a>
-
-                        <a href="#">
-                            <img src="assets/imagens/MD.png" alt="Logo do Mega Drive">
-                        </a>
-                    </div>
-                </div>
-
-                <div class="gen" id="gen3">
-                    <h3>Era dos 32/64-bits</h3>
-
-                    <div class="card-game">
-                        <a href="#">
-                            <img src="assets/imagens/N64.jpg" alt="Logo do Nintendo 64">
-                        </a>
-
-                        <a href="#">
-                            <img src="assets/imagens/PS1.png" alt="Logo do Playstation 1">
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Sessão Jogos Favoritos -->
-
-        <!-- Sessão Quiz -->
-        <div class="container">
-            <section id="quiz">
-                <div id="etapa_genero">
-                    <h2>Qual seu Gênero Favorito?</h2>
-                    <div class="card" onclick="selecionarGenero('Ação')">Ação</div>
-                    <div class="card" onclick="selecionarGenero('Mistério')">Mistério</div>
-                    <div class="card" onclick="selecionarGenero('Terror')">Terror</div>
-                    <div class="card" onclick="selecionarGenero('RPG')">RPG</div>
-                </div>
-
-                <div id="etapa_plataforma" style="display: none;">
-                    <h2>Qual sua Plataforma?</h2>
-                    <div class="card" onclick="selecionarPlataforma('SNES')">SNES</div>
-                    <div class="card" onclick="selecionarPlataforma('PS1')">PS1</div>
-                    <div class="card" onclick="selecionarPlataforma('N64')">N64</div>
-                    <div class="card" onclick="selecionarPlataforma('NES')">NES</div>
-                    <button onclick="enviar()">Ver Resultado</button>
-                </div>
-
-                <div id="div_resultado"></div>
-            </section>
-
-            <section id="text-jogos">
-                <!-- <div class="card-txt"> -->
-                <h2>Descubra um jogo com base nos seus gostos</h2>
-
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere quae in, sed dolorum magni eos
-                    necessitatibus iste quibusdam optio voluptatibus sequi aperiam fuga harum dolores quis nihil!
-                    Nam,repellendus id. Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, quisquam eveniet
-                    illo,
-                    perspiciatis quidem placeat atque aut sunt dolores necessitatibus inventore, minima odit suscipit
-                    nemo consectetur facilis ipsum nesciunt modi!</p>
-                <!-- </div> -->
-            </section>
-        </div>
-
-        <!-- Banner 2 -->
-        <div id="banner2"></div>
-
-
-        <!-- Banner 3 -->
-        <div id="banner3"></div>
-
-        <!-- Sessão Comentário Jogo Favorito
-        <div id="comentario">
-            <div class="container">
-                <h1>Publicar um aviso</h1>
-                <div class="div-form">
-                    <form id="form_postagem" method="post" onsubmit="return publicar()">
-                        <label>
-                            Título:
-                            <br>
-                            <input name="titulo" id="titulo" maxlength="100" type="text">
-                        </label>
-                        <br>
-                        <br>
-                        <label>
-                            Descrição (máximo de 250 caracteres):
-                            <br>
-                            <textarea name="descricao" id="textarea_descricao" maxlength="250" rows="5"></textarea>
-                        </label>
-                        <br>
-                        <br>
-                        <button>Enviar</button>
-                    </form>
-                </div>
-
-                <h1>Mural de Avisos</h1>
-                <div class="div-results">
-                    <div id="feed_container" class="feed-container">
-                    </div>
-                </div>
-            </div>
-        </div> -->
-    </div>
-
-    <!-- Rodapé -->
-    <div class="footer">
-        <div class="container">
-            <h1 class="titulo-footer">Nexium</h1>
-
-            <div class="contato">
-                <ul>
-                    <li>nexium@gmail.com</li>
-                    <li>11 98977-9999</li>
-                </ul>
-            </div>
-
-            <div class="rede">
-                <ul>
-                    <li>Instagram</li>
-                    <li>Facebook</li>
-                    <li>Git Hub</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <button id="subir"><a href="#header"><img src="assets/seta-cima.png" alt="Seta Para Cima"></a></button>
 </body>
 </html>
 
@@ -223,9 +183,35 @@
         etapa_plataforma.style.display = "flex";
     }
 
-    function selecionarPlataforma(plataforma) {
+    function selecionarPlataforma(plataforma, siglaCard) {
         plataformaVar = plataforma;
         console.log(`Filtro atual: ${generoVar} + ${plataformaVar}`);
+
+        card_snes.style.backgroundColor = "";
+        card_snes.style.border = "";
+        
+        card_ps1.style.backgroundColor = "";
+        card_ps1.style.border = "";
+        
+        card_n64.style.backgroundColor = "";
+        card_n64.style.border = "";
+        
+        card_nes.style.backgroundColor = "";
+        card_nes.style.border = "";
+
+        if (siglaCard == "snes") {
+            card_snes.style.backgroundColor = "#e909e9";
+            card_snes.style.border = "2px solid #fff";
+        } else if (siglaCard == "ps1") {
+            card_ps1.style.backgroundColor = "#e909e9";
+            card_ps1.style.border = "2px solid #fff";
+        } else if (siglaCard == "n64") {
+            card_n64.style.backgroundColor = "#e909e9";
+            card_n64.style.border = "2px solid #fff";
+        } else if (siglaCard == "nes") {
+            card_nes.style.backgroundColor = "#e909e9";
+            card_nes.style.border = "2px solid #fff";
+        }
     }
 
     function enviar() {
@@ -239,14 +225,41 @@
                 if (resposta.ok) {
                     resposta.json().then(json => {
                         div_resultado.innerHTML = `
-                            <p>Recomendamos: <strong>${json[0].titulo}</strong></p>
-                            <button class="btn-favoritar" style="cursor:pointer; padding: 10px; margin-top: 10px;" onclick="favoritarJogo(${json[0].id})">⭐ Favoritar Jogo</button>
+                            <p style="margin-top: 15px;">Recomendamos: <strong>${json[0].titulo}</strong></p>
                         `;
+
+                        div_botoes.innerHTML = `<button class="btn-favoritar" style="margin-top: 10px;" onclick="favoritarJogo(${json[0].id})">Favoritar Jogo</button>
+                        <br>
+                        <button class="btn-reiniciar" style="margin-top: 10px;" onclick="reiniciarQuiz()">Jogar de Novo</button>`;
                     });
                 } else {
-                    div_resultado.innerHTML = "Não encontramos um jogo com essa combinação.";
+                    div_resultado.innerHTML = `
+                        <p style="margin-top: 15px;">Não encontramos um jogo com essa combinação.</p>
+                        <button class="btn-reiniciar" style="margin-top: 10px;" onclick="reiniciarQuiz()">🔄 Tentar de Novo</button>
+                    `;
                 }
             });
+    }
+    
+    function reiniciarQuiz() {
+        generoVar = "";
+        plataformaVar = "";
+        div_resultado.innerHTML = "";
+
+        card_snes.style.backgroundColor = "";
+        card_snes.style.border = "";
+        
+        card_ps1.style.backgroundColor = "";
+        card_ps1.style.border = "";
+        
+        card_n64.style.backgroundColor = "";
+        card_n64.style.border = "";
+        
+        card_nes.style.backgroundColor = "";
+        card_nes.style.border = "";
+
+        etapa_plataforma.style.display = "none";
+        etapa_genero.style.display = "flex";
     }
 
     function favoritarJogo(idJogo) {

@@ -16,7 +16,6 @@
 </head>
 
 <body>
-    <!--Header-->
     <div class="header">
         <button class="voltar"><a class="link-voltar" href="./index.html">Voltar</a></button>
 
@@ -39,7 +38,7 @@
                         <input id="senha_input" type="password" placeholder="******">
                     </div>
 
-                    <p>Ainda não tem uma conta? <span ><a style="color: rgb(0, 136, 255); text-decoration: none;" href="cadastro.html">Clique Aqui</a></span></p>
+                    <p>Ainda não tem uma conta? <span><a style="color: rgb(0, 136, 255); text-decoration: none;" href="cadastro.html">Clique Aqui</a></span></p>
 
                     <div style="color: red;" id="msg_Erro"></div>
 
@@ -55,7 +54,6 @@
         <div class="banner"></div>
     </div>
 
-    <!-- Rodapé -->
     <div class="footer">
         <div class="container">
             <h1 class="titulo-footer">Nexium</h1>
@@ -71,13 +69,12 @@
                 <ul>
                     <li>Instagram</li>
                     <li>Facebook</li>
-                    <li>Git Hub</li>
+                    <li>GitHub</li>
                 </ul>
             </div>
         </div>
     </div>
 </body>
-
 </html>
 
 <script>
@@ -89,17 +86,35 @@
         let count = 0;
         let erro = true;
         
-        // if (emailVar == "" && senhaVar == "") {
-        //     msg_Erro.innerHTML = `Todos os campos em branco. <br>  `;
-        //     finalizarAguardar();
-        //     return false;
-        // } 
-        
-        // else {
-        //     setInterval(sumirMensagem, 5000)
-        // }
-        
-        
+        var camposLogin = [
+            { valor: emailVar, nome: "E-mail", tipo: "email" },
+            { valor: senhaVar, nome: "Senha", tipo: "senha" }
+        ];
+
+        var errosLogin = [];
+
+        for (var i = 0; i < camposLogin.length; i++) {
+            var campoAtual = camposLogin[i];
+
+            if (campoAtual.valor == "") {
+                errosLogin.push(`O campo <b>${campoAtual.nome}</b> está vazio.`);
+            }
+
+            if (campoAtual.tipo === "email" && !campoAtual.valor.includes("@gmail")) {
+                errosLogin.push("O <b>E-mail</b> informado deve conter '@gmail'.");
+            }
+
+            if (campoAtual.tipo === "senha" && campoAtual.valor.length < 6) {
+                errosLogin.push("A <b>Senha</b> deve ter pelo menos 6 caracteres.");
+            }
+        }
+
+        if (errosLogin.length > 0) {
+            msg_Erro.innerHTML = errosLogin.join("<br>");
+            finalizarAguardar();
+        } else {
+            msg_Erro.innerHTML = "";
+        }
 
         console.log("FORM LOGIN: ", emailVar);
         console.log("FORM SENHA: ", senhaVar);
@@ -128,7 +143,7 @@
 
                     setTimeout(function () {
                         window.location = "./dashboard/dashboard.html";
-                    }, 1000); // apenas para exibir o loading*/
+                    }, 1000); 
 
                 });
 

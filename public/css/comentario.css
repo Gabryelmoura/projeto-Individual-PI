@@ -1,0 +1,252 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+}
+
+/* Estilização para subir ao topo da página */
+#subir{
+    background-color: white;
+    border: 3px solid rgb(233, 9, 233);
+    border-radius: 15px;
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 75px;
+    width: 75px;
+    transition: all 0.2s ease-in;
+}
+
+#subir > a{
+    font-size: 1.1em;
+    font-weight: 900;
+    text-decoration: none;
+    color: purple;
+    padding: 20px;
+    transition: all 0.2s ease-in;
+}
+
+#subir:hover{
+    border-color: rgb(246, 91, 246);
+    background-color: rgb(246, 91, 246);
+}
+
+#subir > a:hover{
+    color: white;
+}
+
+/* Sessão Cabecalho Lateral */
+.janela {
+    display: flex;
+}
+
+.header-left a {
+    text-decoration: none;
+    color: white;
+}
+
+.header-left {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    height: 100vh;
+    width: 20%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-right: 3px solid rgb(233, 9, 233);
+    background-color: #212124;
+}
+
+.dash-right {
+    display: flex;
+    width: 70%;
+    height: fit-content;
+    background-color: #161618;
+    position: relative;
+    top: 0;
+    left: 25%;
+    height: 100vh;
+    overflow: auto;
+}
+
+.header-left h1 {
+    color: rgb(233, 9, 233);
+    font-size: 35px;
+}
+
+.hello {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.hello h3 {
+    color: #e3b062;
+    font-weight: 300;
+    font-size: 1.3em;
+}
+
+.hello h3 span {
+    font-weight: 800;
+}
+
+.btn-nav {
+    width: 70%;
+    color: white;
+    background-color: rgb(233, 9, 233);
+    border-radius: 5px;
+    text-align: center;
+    padding: 20px 15px;
+}
+
+.btn-nav-white {
+    width: 70%;
+    background-color: white;
+    border-radius: 5px;
+    text-align: center;
+    padding: 20px 15px;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-nav-white:hover{
+    color: white;
+    background-color:rgb(233, 9, 233);
+}
+
+hr{
+    width: 90%;
+    border: 1px solid white;
+}
+
+.btn-nav-white h3 {
+    color: black;
+    padding: 0;
+    margin: 0;
+}
+
+.btn-nav h3,
+.btn-logout h3 {
+    margin: 0;
+    padding: 0px;
+}
+
+.btn-logout {
+    width: 70%;
+    background-color: rgb(160, 10, 160);
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    padding: 20px 15px;
+    margin-top: 100px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-logout:hover {
+    background-color: rgb(203, 18, 203);
+    transform: scale(1.05);
+}
+
+/* Estilização Avisos */
+.dash-right .avisos {
+  width: 100%;
+  color: rgb(216, 216, 216);
+  font-family: 'Barlow', 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.dash-right .avisos .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dash-right .avisos .container .div-form {
+  width: 95%;
+}
+
+.dash-right .avisos .container .div-form #form_postagem {
+  width: 95%;
+}
+
+.dash-right .avisos .div-form label {
+  width: 95%;
+}
+
+.dash-right .avisos .div-form input {
+  width: 95%;
+  border-radius: 5px;
+}
+
+.dash-right .avisos .div-form textarea {
+  width: 95%;
+  border: 3px solid #e6005a;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.dash-right .avisos .div-form button {
+  cursor: pointer;
+  font-family: 'Barlow', 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border: 0;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 10px 15px;
+  color: white;
+  background-color: #e6005a;
+  width: 120px;
+}
+
+.publicacao-btn-editar {
+  cursor: pointer;
+  font-family: 'Barlow', 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border: 0;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 5px 8px;
+  color: white;
+  background-color: #e6005a;
+  width: 80px;
+}
+
+.publicacao {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: stretch;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  border-bottom: 3px solid #e6005a;
+  padding: 20px;
+}
+
+.publicacao>*:not(:last-child) {
+  padding: 0 0 10px 0;
+}
+
+.div-results {
+  width: 100%;
+}
+
+.div-results .feed-container {
+  background-color: #212124;
+  border-radius: 5px;
+  margin-bottom: 80px;
+}
+
+.div-buttons {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.div-buttons>* {
+  margin-left: 30px;
+}

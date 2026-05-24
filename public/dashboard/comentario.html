@@ -2,16 +2,19 @@
 <html lang="pt-br">
 
 <head>
-    <link rel="shortcut icon" href="../assets/icon/favicon2.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../assets/imagens/logo.png" type="image/x-icon">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nexium | Avisos</title>
+    <title>Nexium | Comentários</title>
 
-    
+    <!-- CSS Antigo -->
     <link rel="stylesheet" href="./../css/estilo.css">
-    <link rel="stylesheet" href="./../css/dashboards.css">
-    <link rel="stylesheet" href="./../css/dash.css">
+    <link rel="stylesheet" href="./../css/dashboard.css">
+
+    <!-- CSS Novo -->
+    <link rel="stylesheet" href="./../css/comentario.css">
+
     <script src="../js/sessao.js"></script>
     <script src="./../js/alerta.js"></script>
 
@@ -55,13 +58,14 @@
         </div>
 
         <div class="dash-right">
-
-
             <div class="avisos">
+                <!-- Banner -->
+                <div id="banner"></div>
+
                 <div id="alerta">
                 </div>
                 <div class="container">
-                    <h1>Publicar um aviso</h1>
+                    <h1>Publicar um Comentário</h1>
                     <div class="div-form">
                         <form id="form_postagem" method="post" onsubmit="return publicar()">
                             <label>
@@ -81,13 +85,15 @@
                             <button>Enviar</button>
                         </form>
                     </div>
-                    <h1>Mural de Avisos</h1>
+                    <h1>Mural de Comentário</h1>
                     <div class="div-results">
                         <div id="feed_container" class="feed-container">
                         </div>
                     </div>
                 </div>
             </div>
+
+            <button id="subir"><a href="#banner"><img src="./../assets/seta-cima.png" alt="Seta Para Cima"></a></button>
         </div>
     </div>
 </body>

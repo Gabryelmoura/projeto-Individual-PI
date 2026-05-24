@@ -120,98 +120,114 @@ hr{
     transform: scale(1.05);
 }
 
-/* Sessão dos Cards da Dashboard */
-.dash {
-  width: 80%;
-  position: relative;
-  top: 0;
-  left: 20%;
-  background-color: #333;
-  height: 100vh;
-  overflow: auto;
-}
-
-.dash > .K-container{
-    width: 100%;
-    height: 200px;
-    padding: 20px 0px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    border-bottom: 2px solid white;
-    margin-bottom: 30px;
-}
-
-.dash > .K-container > .card-kpi{
-    background-color: white;
-    width: 215px;
-    height: 200px;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-direction: column;
-    transition: all 0.3s ease-in-out;
-    border-radius: 10px;
-}
-
-.dash > .K-container > .card-kpi > h3{
-    color: rgb(233, 9, 233);
-}
-
-.dash > .K-container > .card-kpi > p{
-    font-weight: 900;
-}
-
-.dash > .K-container > .card-kpi:hover{
-    box-shadow: 3px 3px 3px rgb(233, 9, 233);
-    transform: scale(1.03);
-}
-
-/* Sessão Convidar */
-.convidar{
-    background-color: rgb(233, 9, 233);
-    width: 100%;
+/* Sessão Banner */
+#banner{
     height: 300px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-
-.convidar > .ban{
     width: 100%;
-    height: 200px;
-    background-image: url("../assets/imagens/banner_pac-man.gif");
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url('../assets/imagens/banner_personagens.jpg');
     background-size: cover;
+    background-repeat: no-repeat;
     background-position: center;
 }
 
-.convidar > .txt-convidar{
-    height: 100px;
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    color: white;
+/* Estilização Avisos */
+.dash-right .avisos {
+  width: 100%;
+  color: rgb(216, 216, 216);
+  font-family: 'Barlow', 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.convidar > .txt-convidar > button{
-    width: 200px;
-    height: 50px;
-    background-color: white;
-    border: none;
-    transition: all 0.3s ease-in-out;
+.dash-right .avisos .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.convidar > .txt-convidar > button:hover{
-    transform: scale(1.03);
+.dash-right .avisos .container .div-form {
+  width: 95%;
 }
 
-.convidar > .txt-convidar > button > a{
-    width: 200px;
-    height: 50px;
-    padding: 20px 45px;
-    text-decoration: none;
-    color: rgb(233, 9, 233);
-    font-size: 1.3em;
-    font-weight: 900;
+.dash-right .avisos .container .div-form #form_postagem {
+  width: 95%;
+}
+
+.dash-right .avisos .div-form label {
+  width: 95%;
+}
+
+.dash-right .avisos .div-form input {
+  width: 95%;
+  border-radius: 5px;
+}
+
+.dash-right .avisos .div-form textarea {
+  width: 95%;
+  border: 3px solid #e6005a;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.dash-right .avisos .div-form button {
+  cursor: pointer;
+  font-family: 'Barlow', 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border: 0;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 10px 15px;
+  color: white;
+  background-color: #e6005a;
+  width: 120px;
+}
+
+.publicacao-btn-editar {
+  cursor: pointer;
+  font-family: 'Barlow', 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border: 0;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 5px 8px;
+  color: white;
+  background-color: #e6005a;
+  width: 80px;
+}
+
+.publicacao {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: stretch;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  border-bottom: 3px solid #e6005a;
+  padding: 20px;
+}
+
+.publicacao>*:not(:last-child) {
+  padding: 0 0 10px 0;
+}
+
+.div-results {
+  width: 100%;
+}
+
+.div-results .feed-container {
+  background-color: #212124;
+  border-radius: 5px;
+  margin-bottom: 80px;
+}
+
+.div-buttons {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.div-buttons>* {
+  margin-left: 30px;
 }
