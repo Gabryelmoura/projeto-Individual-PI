@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nexium | Jogos</title>
+
+    <script src="js/sessao.js"></script>
+
+    <link rel="stylesheet" href="./../css/games.css">
+    <link rel="icon" href="./assets/imagens/logo.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+</head>
+
+<body onload="validarSessao2()">
+    <div class="janela">
+        <div class="header-left">
+                <h1>Nexium</h1>
+
+                <div class="hello">
+                    <h3><span id="b_usuario">usuário</span></h3>
+                    </div>
+
+                <div class="btn-nav">
+                    <a href="./../jogos.html">
+                        <h3>Jogos</h3>
+                    </a>
+                </div>
+
+                <div class="btn-nav-white">
+                    <a href="./../dashboard/dashboard.html">
+                        <h3>Gráficos</h3>
+                    </a>
+                </div>
+
+                <div class="btn-nav-white">
+                    <a href="./../dashboard/comentario.html">
+                        <h3>Comentários</h3>
+                    </a>
+                </div>
+
+                <hr>
+
+                <div class="btn-logout" onclick="limparSessao()">
+                    <h3>Sair</h3>
+                </div>
+        </div>
+
+        <div class="cont">
+            <div class="main">
+                <div id="banner1-16bit">
+                    <div class="opca">
+                        <div class="txt-banner">
+                            <p class="titulo">Os mais jogados do <span>SNES</span> e <span>Mega Drive</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="escolher-games">
+                    <h2>Selecione as Gerações</h2>
+
+                    <div class="escolha">
+                        <div class="gen">
+                            <h3>Era dos 8-bits</h3>
+
+                            <div class="card-game">
+                                <a href="era8.html">
+                                    <img src="./../assets/imagens/NES.png" alt="Logo do NES">
+
+                                    <img src="./../assets/imagens/MS.png" alt="Logo do Master System">
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="gen selecionado">
+                            <h3>Era dos 16-bits</h3>
+
+                            <div class="card-game">
+                                <a href="#SNES">
+                                    <img src="./../assets/imagens/SNES.png" alt="Logo do Super Nintendo">
+                                </a>
+
+                                <a href="#MD">
+                                    <img src="./../assets/imagens/MD.png" alt="Logo do Mega Drive">
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="gen">
+                            <h3>Era dos 32/64-bits</h3>
+
+                            <div class="card-game">
+                                <a href="era32.html">
+                                    <img src="./../assets/imagens/N64.jpg" alt="Logo do Nintendo 64">
+
+                                    <img src="./../assets/imagens/PS1.png" alt="Logo do PlayStation 1">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <!-- Seção do SNES -->
+                    <div class="video" id="SNES">
+                        <h2>Super Nintendo Entertainment System</h2>
+    
+                        <div class="card-game">
+                            <div class="card-game-info">
+                                <img src="./../assets/imagens/capa_SMW.jpg" alt="">
+
+                                <div class="txt-game">
+                                    <h3>Nome: Super Mario World</h3>
+                                    <h3>Data de Lançamento: 21 de novembro de 1990</h3>
+                                    <h3>Empresa: Nintendo</h3>
+                                    <h3>Descrição: </h3>
+                                    <p>Enquanto tiravam férias na exuberante Terra dos Dinossauros, a Princesa Peach é novamente raptada por Bowser. Com a ajuda de um dinossaurinho verde chamado Yoshi, Mario e Luigi exploram um mapa gigantesco repleto de segredos.</p>
+                                </div>
+                            </div>
+                            <div class="card-game-info">
+                                <img src="./../assets/imagens/capa_DKC.jpg" alt="">
+
+                                <div class="txt-game">
+                                    <h3>Nome: Donkey Kong Country</h3>
+                                    <h3>Data de Lançamento: 21 de novembro de 1994</h3>
+                                    <h3>Empresa: Rare</h3>
+                                    <h3>Descrição: </h3>
+                                    <p>O jacaré Rei K. Rool e sua gangue de Kremlings invadem a ilha dos macacos e roubam todo o estoque de bananas do Donkey Kong. Juntamente com seu ágil sobrinho Diddy Kong, eles atravessam a ilha para espancar os répteis e recuperar o tesouro.</p>
+                                </div>
+                            </div>
+                            <div class="card-game-info">
+                                <img src="./../assets/imagens/capa_SF2.jpg" alt="">
+
+                                <div class="txt-game">
+                                    <h3>Nome: Street Fighter II: The World Warrior</h3>
+                                    <h3>Data de Lançamento: 10 de junho de 1992</h3>
+                                    <h3>Empresa: Capcom</h3>
+                                    <h3>Descrição: </h3>
+                                    <p>Lutadores de artes marciais de diversos cantos do mundo entram em um torneio internacional de combate para provar quem é o guerreiro definitivo e desmantelar a organização criminosa Shadaloo, liderada pelo ditador M. Bison.</p>
+                                </div>
+                            </div>
+                            <div class="card-game-info">
+                                <img src="./../assets/imagens/capa_TLOZLP.jpg" alt="">
+
+                                <div class="txt-game">
+                                    <h3>Nome: The Legend of Zelda: A Link to the Past</h3>
+                                    <h3>Data de Lançamento: 21 de novembro de 1991</h3>
+                                    <h3>Empresa: Nintendo</h3>
+                                    <h3>Descrição: </h3>
+                                    <p>O feiticeiro Agahnim elimina o rei de Hyrule e começa a aprisionar as descendentes dos Sete Sábios para romper o selo que prende Ganon no Mundo das Trevas. Link precisa viajar entre as dimensões da Luz e das Trevas para impedir a catástrofe.</p>
+                                </div>
+                            </div>
+                            <div class="card-game-info">
+                                <img src="./../assets/imagens/capa_CT.jpg" alt="">
+
+                                <div class="txt-game">
+                                    <h3>Nome: Chrono Trigger</h3>
+                                    <h3>Data de Lançamento: 11 de março de 1995</h3>
+                                    <h3>Empresa: Square</h3>
+                                    <h3>Descrição: </h3>
+                                    <p>Durante uma feira milenar, um acidente com um teletransporte joga a jovem Marle no passado. Seu amigo Crono viaja no tempo para resgatá-la, mas o grupo acaba descobrindo que uma criatura alienígena parasita chamada Lavos vai destruir o planeta no futuro (ano 1999), iniciando uma corrida temporal para reescrever a história.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="banner2-16bit"></div>
+                    
+                    <!-- Seção do Mega Drive -->
+                    <div class="video" id="MD">
+                        <h2>Mega Drive</h2>
+    
+                        <div class="card-game">
+                            <div class="card-game-info">
+                                <img src="./../assets/imagens/capa_SHMD.jpg" alt="">
+
+                                <div class="txt-game">
+                                    <h3>Nome: Sonic the Hedgehog</h3>
+                                    <h3>Data de Lançamento: 23 de junho de 1991</h3>
+                                    <h3>Empresa: Sega</h3>
+                                    <h3>Descrição: </h3>
+                                    <p>O jogo que mudou o patamar da Sega. Traz a primeira grande batalha de velocidade do ouriço Sonic contra o Dr. Robotnik para salvar os animais nativos e as Esmeraldas do Caos nas belas colinas da Green Hill Zone.</p>
+                                </div>
+                            </div>
+                            <div class="card-game-info">
+                                <img src="./../assets/imagens/capa_SH2MD.jpg" alt="">
+
+                                <div class="txt-game">
+                                    <h3>Nome: Sonic the Hedgehog 2</h3>
+                                    <h3>Data de Lançamento: 24 de novembro de 1992</h3>
+                                    <h3>Empresa: Sega</h3>
+                                    <h3>Descrição: </h3>
+                                    <p>Robotnik está construindo uma estação espacial armada chamada "Ovo da Morte". Sonic retorna à ação com seu novo melhor amigo de duas caudas, Tails, buscando coletar as esmeraldas e impedir o lançamento da arma espacial.</p>
+                                </div>
+                            </div>
+                            <div class="card-game-info">
+                                <img src="./../assets/imagens/capa_ALD.jpg" alt="">
+
+                                <div class="txt-game">
+                                    <h3>Nome: Disney's Aladdin</h3>
+                                    <h3>Data de Lançamento: 11 de novembro de 1993</h3>
+                                    <h3>Empresa: Virgin Games</h3>
+                                    <h3>Descrição: </h3>
+                                    <p>Baseado na animação clássica, o jovem de rua Aladdin encontra uma lâmpada mágica com um gênio brincalhão. Ele precisa usar seus desejos e habilidades para derrotar o vizir maligno Jafar, conquistar o amor da Princesa Jasmine e salvar a cidade de Agrabah.</p>
+                                </div>
+                            </div>
+                            <div class="card-game-info">
+                                <img src="./../assets/imagens/capa_SR2.jpg" alt="">
+
+                                <div class="txt-game">
+                                    <h3>Nome: Streets of Rage 2</h3>
+                                    <h3>Data de Lançamento: 20 de dezembro de 1992</h3>
+                                    <h3>Empresa: Sega</h3>
+                                    <h3>Descrição: </h3>
+                                    <p>Um ano após derrotarem o sindicato do crime, o terrível Mr. X retorna das sombras e sequestra Adam, um dos heróis originais. Seus amigos Axel e Blaze se unem a Skate e Max para descer a lenha nas gangues de rua e resgatar o companheiro.</p>
+                                </div>
+                            </div>
+                            <div class="card-game-info">
+                                <img src="./../assets/imagens/capa_MK2.jpg" alt="">
+
+                                <div class="txt-game">
+                                    <h3>Nome: Mortal Kombat II</h3>
+                                    <h3>Data de Lançamento: 1994</h3>
+                                    <h3>Empresa: Midway</h3>
+                                    <h3>Descrição: </h3>
+                                    <p>Após a derrota de Shang Tsung, o imperador da Exoterra, Shao Kahn, cria um novo e perigoso torneio de artes marciais em sua própria dimensão. Os guerreiros da Terra são atraídos para a armadilha, onde lutas sangrentas decidirão o destino dos reinos.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer">
+                <div class="container">
+                    <h1 class="titulo-footer">Nexium</h1>
+
+                    <div class="contato">
+                        <ul>
+                            <li>nexium@gmail.com</li>
+                            <li>11 98977-9999</li>
+                        </ul>
+                    </div>
+
+                    <div class="rede">
+                        <ul>
+                            <li>Instagram</li>
+                            <li>Facebook</li>
+                            <li>GitHub</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <button id="subir"><a href="#banner1-16bit"><img src="./../assets/seta-cima.png" alt="Seta Para Cima"></a></button>
+        </div>        
+    </div>
+</body>
+</html>
+
+<script>
+    b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+</script>

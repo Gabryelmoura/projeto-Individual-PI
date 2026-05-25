@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nexium | Jogos</title>
+
+    <script src="js/sessao.js"></script>
+
+    <link rel="stylesheet" href="./../css/games.css">
+    <link rel="icon" href="./assets/imagens/logo.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+</head>
+
+<body onload="validarSessao2()">
+    <div class="janela">
+        <div class="header-left">
+                <h1>Nexium</h1>
+
+                <div class="hello">
+                    <h3><span id="b_usuario">usuário</span></h3>
+                    </div>
+
+                <div class="btn-nav">
+                    <a href="./../jogos.html">
+                        <h3>Jogos</h3>
+                    </a>
+                </div>
+
+                <div class="btn-nav-white">
+                    <a href="./../dashboard/dashboard.html">
+                        <h3>Gráficos</h3>
+                    </a>
+                </div>
+
+                <div class="btn-nav-white">
+                    <a href="./../dashboard/comentario.html">
+                        <h3>Comentários</h3>
+                    </a>
+                </div>
+
+                <hr>
+
+                <div class="btn-logout" onclick="limparSessao()">
+                    <h3>Sair</h3>
+                </div>
+        </div>
+
+        <div class="cont">
+            <div class="main">
+                <div id="banner1-32bit">
+                    <div class="opca">
+                        <div class="txt-banner">
+                            <p class="titulo">Os mais jogados do <span>N64</span> e <span>Play Station 1</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="escolher-games">
+                    <h2>Selecione as Gerações</h2>
+
+                    <div class="escolha">
+                        <div class="gen">
+                            <h3>Era dos 8-bits</h3>
+
+                            <div class="card-game">
+                                <a href="era8.html">
+                                    <img src="./../assets/imagens/NES.png" alt="Logo do NES">
+
+                                    <img src="./../assets/imagens/MS.png" alt="Logo do Master System">
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="gen">
+                            <h3>Era dos 16-bits</h3>
+
+                            <div class="card-game">
+                                <a href="era16.html">
+                                    <img src="./../assets/imagens/SNES.png" alt="Logo do Super Nintendo">
+
+                                    <img src="./../assets/imagens/MD.png" alt="Logo do Mega Drive">
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="gen selecionado">
+                            <h3>Era dos 32/64-bits</h3>
+
+                            <div class="card-game">
+                                <a href="#N64">
+                                    <img src="./../assets/imagens/N64.jpg" alt="Logo do Nintendo 64">
+                                </a>
+
+                                <a href="#PS1">
+                                    <img src="./../assets/imagens/PS1.png" alt="Logo do PlayStation 1">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <!-- Seção do N64 -->
+                    <div class="video" id="N64">
+                        <h2>Nintendo 64</h2>
+    
+                        <div class="card-game">
+                            <div class="card-game-info">
+                                <img src="./../assets/imagens/capa_SM64.jpg" alt="">
+                                <div class="txt-game">
+                                    <h3>Nome: Super Mario 64</h3>
+                                    <h3>Data de Lançamento: 23 de junho de 1996</h3>
+                                    <h3>Empresa: Nintendo</h3>
+                                    <h3>Descrição: </h3>
+                                    <p>Mario vai ao castelo a convite da Princesa Peach para comer um bolo, mas descobre que Bowser invadiu o local e aprisionou a princesa e seus servos dentro das pinturas das paredes. Mario precisa saltar para dentro dos quadros para coletar as Estrelas de Poder e quebrar o feitiço.</p>
+                                </div>
+                            </div>
+                            <div class="card-game-info">
+                                <img src="./../assets/imagens/capa_MK64.jpg" alt="">
+                                <div class="txt-game">
+                                    <h3>Nome: Mario Kart 64</h3>
+                                    <h3>Data de Lançamento: 14 de dezembro de 1996</h3>
+                                    <h3>Empresa: Nintendo</h3>
+                                    <h3>Descrição: </h3>
+                                    <p>Os personagens icônicos do universo do Mario se reúnem para disputar campeonatos de corrida de kart em pistas tridimensionais dinâmicas, utilizando cascos, bananas e raios para sabotar os oponentes.</p>
+                                </div>
+                            </div>
+                            <div class="card-game-info">
+                                <img src="./../assets/imagens/capa_GE007.jpg" alt="">
+                                <div class="txt-game">
+                                    <h3>Nome: GoldenEye 007</h3>
+                                    <h3>Data de Lançamento: 25 de agosto de 1997</h3>
+                                    <h3>Empresa: Rare</h3>
+                                    <h3>Descrição: </h3>
+                                    <p>Baseado no filme de James Bond, o agente secreto 007 é enviado em uma missão internacional para impedir que um sindicato criminoso faça uso de uma arma de satélite espacial soviética chamada "GoldenEye". Redefiniu os jogos de tiro em primeira pessoa em consoles.</p>
+                                </div>
+                            </div>
+                            <div class="card-game-info">
+                                <img src="./../assets/imagens/capa_TLOZOT.jpg" alt="">
+                                <div class="txt-game">
+                                    <h3>Nome: The Legend of Zelda: Ocarina of Time</h3>
+                                    <h3>Data de Lançamento: 21 de novembro de 1998</h3>
+                                    <h3>Empresa: Nintendo</h3>
+                                    <h3>Descrição: </h3>
+                                    <p>O jovem Link é guiado pela fada Navi a impedir que Ganondorf assuma o controle da Triforça. Ao retirar a Master Sword do pedestal, Link fica selado por 7 anos e acorda em um futuro distópico, precisando usar uma ocarina mágica para alternar entre as eras e salvar Hyrule.</p>
+                                </div>
+                            </div>
+                            <div class="card-game-info">
+                                <img src="./../assets/imagens/capa_SSB.jpg" alt="">
+                                <div class="txt-game">
+                                    <h3>Nome: Super Smash Bros</h3>
+                                    <h3>Data de Lançamento: 21 de janeiro de 1999</h3>
+                                    <h3>Empresa: HAL Laboratory</h3>
+                                    <h3>Descrição: </h3>
+                                    <p>Sob a premissa imaginativa de brinquedos ganhando vida pelas mãos de uma misteriosa luva mágica (Master Hand), os maiores mascotes da Nintendo (Mario, Link, Samus, Pikachu, Donkey Kong, etc.) enfrentam-se em arenas flutuantes dinâmicas.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="banner2-32bit"></div>
+
+                    <!-- Seção do Playstation 1 -->
+                    <div class="video" id="PS1">
+                        <h2>Playstation 1</h2>
+    
+                        <div class="card-game">
+                            <div class="card-game-info">
+                                <img src="./../assets/imagens/capa_GT.jpg" alt="">
+                                <div class="txt-game">
+                                    <h3>Nome: Gran Turismo</h3>
+                                    <h3>Data de Lançamento: 23 de dezembro de 1997</h3>
+                                    <h3>Empresa: Polyphony Digital</h3>
+                                    <h3>Descrição: </h3>
+                                    <p>O jogo de simulação automobilística definitivo que revolucionou o gênero. Não possui uma trama narrativa: o foco do jogador é obter diferentes licenças de piloto, vencer corridas de resistência e usar o dinheiro dos prêmios para comprar e modificar centenas de carros reais.</p>
+                                </div>
+                            </div>
+                            <div class="card-game-info">
+                                <img src="./../assets/imagens/capa_FF7.jpg" alt="">
+                                <div class="txt-game">
+                                    <h3>Nome: Final Fantasy VII</h3>
+                                    <h3>Data de Lançamento: 31 de janeiro de 1997</h3>
+                                    <h3>Empresa: Square</h3>
+                                    <h3>Descrição: </h3>
+                                    <p>Cloud Strife, um mercenário frio e apático, junta-se ao grupo ecoterrorista Avalanche para combater a megacorporação Shinra, que está drenando a energia vital do planeta. A trama escala para proporções cósmicas quando ressurge Sephiroth, um lendário guerreiro geneticamente modificado que planeja se tornar um deus destruindo a Terra.</p>
+                                </div>
+                            </div>
+                            <div class="card-game-info">
+                                <img src="./../assets/imagens/capa_GT2.jpg" alt="">
+                                <div class="txt-game">
+                                    <h3>Nome: Gran Turismo 2</h3>
+                                    <h3>Data de Lançamento: 11 de dezembro de 1999</h3>
+                                    <h3>Empresa: Polyphony Digital</h3>
+                                    <h3>Descrição: </h3>
+                                    <p>Expandindo a fórmula revolucionária do antecessor, dividia-se em dois discos (um para o modo Arcade e outro de Simulação) trazendo mais de 600 carros licenciados da vida real e adicionando corridas do tipo rali.</p>
+                                </div>
+                            </div>
+                            <div class="card-game-info">
+                                <img src="./../assets/imagens/capa_RE2.jpg" alt="">
+                                <div class="txt-game">
+                                    <h3>Nome: Resident Evil 2</h3>
+                                    <h3>Data de Lançamento: 21 de janeiro de 1998</h3>
+                                    <h3>Empresa: Capcom</h3>
+                                    <h3>Descrição: </h3>
+                                    <p>Dois meses após os eventos do primeiro jogo, a cidade de Raccoon City é completamente tomada por um surto do T-Vírus criado pela corporação Umbrella. O policial novato Leon S. Kennedy e a jovem universitária Claire Redfield se cruzam na cidade e precisam lutar lado a lado contra zumbis e mutantes terríveis para escapar vivos.</p>
+                                </div>
+                            </div>
+                            <div class="card-game-info">
+                                <img src="./../assets/imagens/capa_TKN3.jpg" alt="">
+                                <div class="txt-game">
+                                    <h3>Nome: Tekken 3</h3>
+                                    <h3>Data de Lançamento: 26 de março de 1998</h3>
+                                    <h3>Empresa: Namco</h3>
+                                    <h3>Descrição: </h3>
+                                    <p>Quinze anos após o torneio anterior, uma entidade asteca imortal conhecida como Ogre acorda e começa a assassinar grandes mestres de artes marciais pelo mundo. Heihachi Mishima promove o terceiro Torneio do Rei dos Punhos de Ferro para usar seu próprio neto, Jin Kazama, como isca para atrair e capturar a criatura.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer">
+                <div class="container">
+                    <h1 class="titulo-footer">Nexium</h1>
+
+                    <div class="contato">
+                        <ul>
+                            <li>nexium@gmail.com</li>
+                            <li>11 98977-9999</li>
+                        </ul>
+                    </div>
+
+                    <div class="rede">
+                        <ul>
+                            <li>Instagram</li>
+                            <li>Facebook</li>
+                            <li>GitHub</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <button id="subir"><a href="#banner1-32bit"><img src="./../assets/seta-cima.png" alt="Seta Para Cima"></a></button>
+        </div>        
+    </div>
+</body>
+</html>
+
+<script>
+    b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+</script>

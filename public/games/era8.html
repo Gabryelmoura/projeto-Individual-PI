@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nexium | Jogos</title>
+
+    <script src="js/sessao.js"></script>
+
+    <link rel="stylesheet" href="./../css/games.css">
+    <link rel="icon" href="./assets/imagens/logo.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+</head>
+
+<body onload="validarSessao2()">
+    <div class="janela">
+        <div class="header-left">
+                <h1>Nexium</h1>
+
+                <div class="hello">
+                    <h3><span id="b_usuario">usuário</span></h3>
+                    </div>
+
+                <div class="btn-nav">
+                    <a href="./../jogos.html">
+                        <h3>Jogos</h3>
+                    </a>
+                </div>
+
+                <div class="btn-nav-white">
+                    <a href="./../dashboard/dashboard.html">
+                        <h3>Gráficos</h3>
+                    </a>
+                </div>
+
+                <div class="btn-nav-white">
+                    <a href="./../dashboard/comentario.html">
+                        <h3>Comentários</h3>
+                    </a>
+                </div>
+
+                <hr>
+
+                <div class="btn-logout" onclick="limparSessao()">
+                    <h3>Sair</h3>
+                </div>
+        </div>
+
+        <div class="cont">
+            <div class="main">
+                <div id="banner1-8bit">
+                    <div class="opca">
+                        <div class="txt-banner">
+                            <p class="titulo">Os mais jogados do <span>NES</span> e <span>Master System</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="escolher-games">
+                    <h2>Selecione as Gerações</h2>
+
+                    <div class="escolha">
+                        <div class="gen selecionado">
+                            <h3>Era dos 8-bits</h3>
+
+                            <div class="card-game">
+                                <a href="#NES">
+                                    <img src="./../assets/imagens/NES.png" alt="Logo do NES">
+                                </a>
+
+                                <a href="#MS">
+                                    <img src="./../assets/imagens/MS.png" alt="Logo do Master System">
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="gen">
+                            <h3>Era dos 16-bits</h3>
+
+                            <div class="card-game">
+                                <a href="era16.html">
+                                    <img src="./../assets/imagens/SNES.png" alt="Logo do Super Nintendo">
+
+                                    <img src="./../assets/imagens/MD.png" alt="Logo do Mega Drive">
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="gen">
+                            <h3>Era dos 32/64-bits</h3>
+
+                            <div class="card-game">
+                                <a href="era32.html">
+                                    <img src="./../assets/imagens/N64.jpg" alt="Logo do Nintendo 64">
+                                
+                                    <img src="./../assets/imagens/PS1.png" alt="Logo do PlayStation 1">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <!-- Seção do NES -->
+                    <div class="video" id="NES">
+                        <h2>Nintendo Entertainment System</h2>
+
+                        <div class="card-game">
+                            <div class="card-game-info">
+                                <img src="./../assets/imagens/capa_SMB.jpg" alt="Capa Super Mario Bros">
+
+                                <div class="txt-game">
+                                    <h3>Nome: Super Mario Bros</h3>
+                                    <h3>Data de Lançamento: 13 de setembro de 1985</h3>
+                                    <h3>Empresa: Nintendo</h3>
+                                    <h3>Descrição: </h3>
+                                    <p>O maligno Rei Bowser (Koopa) invade o Reino dos Cogumelos, transforma seus habitantes em blocos e sequestra a Princesa Peach. Cabe ao encanador Mario (e seu irmão Luigi) atravessar mundos repletos de perigos para salvá-la.</p>
+                                </div>
+                            </div>
+
+                            <div class="card-game-info">
+                                <img src="./../assets/imagens/capa_SMB3.jpg" alt="">
+
+                                <div class="txt-game">
+                                    <h3>Nome: Super Mario Bros. 3</h3>
+                                    <h3>Data de Lançamento: 23 de outubro de 1988</h3>
+                                    <h3>Empresa: Nintendo</h3>
+                                    <h3>Descrição: </h3>
+                                    <p>Bowser e seus sete filhos (os Koopalingas) roubam os cetros mágicos dos reis de sete mundos diferentes, transformando-os em animais. Mario e Luigi partem para recuperar os artefatos e deter a ameaça definitiva de Bowser.</p>
+                                </div>
+                            </div>
+
+                            <div class="card-game-info">
+                                <img src="./../assets/imagens/capa_DH.jpg" alt="">
+
+                                <div class="txt-game">
+                                    <h3>Nome: Duck Hunt</h3>
+                                    <h3>Data de Lançamento: 21 de abril de 1984</h3>
+                                    <h3>Empresa: Nintendo</h3>
+                                    <h3>Descrição: </h3>
+                                    <p>Um jogo de tiro focado em mirar e atirar em patos que voam para fora da vegetação, enquanto um cão de caça (famoso por sua risada sarcástica caso você erre) recolhe as aves abatidas.</p>
+                                </div>
+                            </div>
+
+                            <div class="card-game-info">
+                                <img src="./../assets/imagens/capa_TLOZ.jpg" alt="">
+
+                                <div class="txt-game">
+                                    <h3>Nome: The Legend of Zelda</h3>
+                                    <h3>Data de Lançamento: 21 de fevereiro de 1986</h3>
+                                    <h3>Empresa: Nintendo</h3>
+                                    <h3>Descrição: </h3>
+                                    <p>O Príncipe das Trevas, Ganon, invade o reino de Hyrule para roubar a Triforça do Poder. Para proteger o resto da relíquia, a Princesa Zelda divide a Triforça da Sabedoria em oito pedaços e os esconde, desafiando o jovem herói Link a recuperá-los e salvá-la.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="card-game-info">
+                                <img src="./../assets/imagens/capa_MM2.jpg" alt="">
+
+                                <div class="txt-game">
+                                    <h3>Nome: Mega Man 2</h3>
+                                    <h3>Data de Lançamento: 24 de dezembro de 1988</h3>
+                                    <h3>Empresa: Capcom</h3>
+                                    <h3>Descrição: </h3>
+                                    <p>Após ser derrotado no primeiro jogo, o cientista louco Dr. Wily cria oito novos e mais poderosos Robôs Mestres para dominar o mundo. O robô herói Mega Man é reativado para destruir as novas ameaças e impedir os planos de Wily.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="banner2-8bit"></div>
+
+                    <!-- Seção do Master System -->
+                    <div class="video" id="MS">
+                        <h2>Master System</h2>
+
+    
+                        <div class="card-game">
+                            <div class="card-game-info">
+                                <img src="./../assets/imagens/capa_AKMW.jpg" alt="">
+                                <div class="txt-game">
+                                    <h3>Nome: Alex Kidd in Miracle World</h3>
+                                    <h3>Data de Lançamento: 1 de novembro de 1986</h3>
+                                    <h3>Empresa: Sega</h3>
+                                    <h3>Descrição: </h3>
+                                    <p>Alex Kidd descobre que é o príncipe perdido do planeta Radaxian. Ele precisa dominar a arte das artes marciais e vencer o vilão Janken, o Grande (em partidas mortais de pedra, papel e tesoura) para salvar seu reino e resgatar seu irmão.</p>
+                                </div>
+                            </div>
+                            <div class="card-game-info">
+                                <img src="./../assets/imagens/capa_SH.jpg" alt="">
+                                <div class="txt-game">
+                                    <h3>Nome: Sonic the Hedgehog</h3>
+                                    <h3>Data de Lançamento: 25 de outubro de 1991</h3>
+                                    <h3>Empresa: Sega</h3>
+                                    <h3>Descrição: </h3>
+                                    <p>O terrível cientista Dr. Robotnik está capturando os animais inocentes de South Island e transformando-os em robôs escravos para encontrar as Esmeraldas do Caos. O ouriço azul corre contra o tempo para libertar seus amigos.</p>
+                                </div>
+                            </div>
+                            <div class="card-game-info">
+                                <img src="./../assets/imagens/capa_CISMM.jpg" alt="">
+                                <div class="txt-game">
+                                    <h3>Nome: Castle of Illusion Starring Mickey Mouse</h3>
+                                    <h3>Data de Lançamento: Novembro de 1990</h3>
+                                    <h3>Empresa: Sega</h3>
+                                    <h3>Descrição: </h3>
+                                    <p>A bruxa malvada Mizrabel sequestra Minnie Mouse para roubar sua beleza e juventude. Mickey deve entrar no traiçoeiro Castelo das Ilusões, coletar as sete Joias da Rainbow e cruzar mundos fantasiosos para resgatar sua amada.</p>
+                                </div>
+                            </div>
+                            <div class="card-game-info">
+                                <img src="./../assets/imagens/capa_PS.jpg" alt="">
+                                <div class="txt-game">
+                                    <h3>Nome: Phantasy Star</h3>
+                                    <h3>Data de Lançamento: 20 de dezembro de 1987</h3>
+                                    <h3>Empresa: Sega</h3>
+                                    <h3>Descrição: </h3>
+                                    <p>Em um sistema solar distante, o tirano Rei Lassic espalha o caos. Após testemunhar a execução de seu irmão, a jovem guerreira Alis jura vingança e inicia uma jornada espacial épica para derrubar o ditador.</p>
+                                </div>
+                            </div>
+                            <div class="card-game-info">
+                                <img src="./../assets/imagens/capa_LISMM.jpg" alt="">
+                                <div class="txt-game">
+                                    <h3>Nome: Land of Illusion Starring Mickey Mouse</h3>
+                                    <h3>Data de Lançamento: Março de 1993</h3>
+                                    <h3>Empresa: Sega</h3>
+                                    <h3>Descrição: </h3>
+                                    <p>Mickey cai no sono lendo um livro e acorda em um vilarejo mágico que perdeu sua felicidade após uma joia mágica ser roubada por um fantasma maligno. Ele inicia uma nova e aclamada jornada de plataforma para restaurar a paz no reino.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer">
+                <div class="container">
+                    <h1 class="titulo-footer">Nexium</h1>
+
+                    <div class="contato">
+                        <ul>
+                            <li>nexium@gmail.com</li>
+                            <li>11 98977-9999</li>
+                        </ul>
+                    </div>
+
+                    <div class="rede">
+                        <ul>
+                            <li>Instagram</li>
+                            <li>Facebook</li>
+                            <li>GitHub</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <button id="subir"><a href="#banner1-8bit"><img src="./../assets/seta-cima.png" alt="Seta Para Cima"></a></button>
+        </div>        
+    </div>
+</body>
+</html>
+
+<script>
+    b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+</script>
