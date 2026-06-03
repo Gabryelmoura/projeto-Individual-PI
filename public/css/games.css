@@ -377,14 +377,6 @@ hr{
     width: 55%;
 }
 
-.main > .container > .video > .card-game > .card-game-info > .txt-game > h3{
-
-}
-
-.main > .container > .video > .card-game > .card-game-info > .txt-game > p{
-
-}
-
 /* Estilização do Rodapé */
 .footer {
     background-image: -moz-linear-gradient(45deg, rgb(201, 17, 201), purple, black);

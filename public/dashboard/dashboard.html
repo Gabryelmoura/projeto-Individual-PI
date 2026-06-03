@@ -17,10 +17,8 @@
         href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
 
-    <!-- scripts do Chart.js - 2022-1 -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-    <!--FONT AWESOME-->
     <script src="https://kit.fontawesome.com/9f7414eb10.js" crossorigin="anonymous"></script>
 </head>
 
@@ -31,7 +29,6 @@
 
             <div class="hello">
                 <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
-                <!-- <h3>Sua, <span id="b_email">Senha</span>!</h3> -->
             </div>
 
             <div class="btn-nav-white">
@@ -58,7 +55,6 @@
         </div>
 
         <div class="dash">
-            <!-- Sessão dos Cards -->
             <div class="K-container">
                 <div class="card-kpi">
                     <h3>Meus Favoritos</h3>
@@ -89,17 +85,14 @@
                     <p id="kpi_total_geral_posts">0</p>
                     <span>Discussões na comunidade</span>
                 </div>
-
             </div>
 
-            <!-- Gráfico Dashboard -->
-            <div id="graficos" style="width: 75%; margin: 30px auto; background-color: #161623; padding: 20px; border-radius: 12px; box-shadow: 0 15px 35px rgba(0,0,0,0.5);">
-                <h2 style="color: #fff; text-align: center; font-family: 'Exo 2', sans-serif; margin-bottom: 15px;">Top Jogos Mais Favoritados pelos Usuários</h2>
+            <div id="graficos" style="width: 80%; margin: 30px auto; background-color: #161623; padding: 30px; border-radius: 12px; box-shadow: 0 15px 35px rgba(0,0,0,0.5);">
+                <h2 style="color: #fff; text-align: center; font-family: 'Exo 2', sans-serif; margin-bottom: 25px;">Top Jogos Mais Favoritados pelos Usuários</h2>
                 
                 <canvas id="myChartCanvas"></canvas>
             </div>
 
-            <!-- Sessão para Convidar -->
             <div class="convidar">
                 <div class="ban"></div>
 
@@ -114,12 +107,117 @@
 </html>
 
 <script>
-    b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+    b_usuario.innerHTML = sessionStorage.NOME_USUARIO || "usuário";
+
+    let proximaAtualizacao;
 
     window.onload = function() {
         carregarKpisDoUsuario();
-        exibirGrafico();
+        obterDadosGrafico();
     };
+
+    function obterDadosGrafico() {
+        if (proximaAtualizacao != undefined) {
+            clearTimeout(proximaAtualizacao);
+        }
+
+        fetch("/jogos/grafico", { cache: 'no-store' }).then(function (response) {
+            if (response.ok) {
+                response.json().then(function (resposta) {
+                    console.log(`Dados iniciais recebidos: ${JSON.stringify(resposta)}`);
+                   
+                    plotarGrafico(resposta);
+                });
+            } else {
+                console.error('Nenhum dado encontrado ou erro na API');
+                document.getElementById("graficos").innerHTML = `<p style="color: #fff; text-align: center;">Nenhum jogo favoritado na comunidade ainda.</p>`;
+            }
+        })
+        .catch(function (error) {
+            console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+        });
+    }
+
+    function plotarGrafico(resposta) {
+        console.log('Iniciando plotagem do gráfico...');
+
+        let labels = [];
+        let dados = {
+            labels: labels,
+            datasets: [{
+                label: 'Total de Escolhas',
+                data: [],
+                backgroundColor: '#9b30ff',
+                borderColor: '#00ffff',     
+                borderWidth: 2,
+                borderRadius: 4
+            }]
+        };
+
+        for (let i = 0; i < resposta.length; i++) {
+            labels.push(resposta[i].titulo);
+            dados.datasets[0].data.push(resposta[i].total);
+        }
+
+        const config = {
+            type: 'bar',
+            data: dados,
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: { color: '#ffffff', stepSize: 1 }, // stepSize: 1 evita notas quebradas (0.5, 1.5...)
+                        grid: { color: 'rgba(255, 255, 255, 0.1)' }
+                    },
+                    x: {
+                        ticks: { color: '#ffffff', font: { size: 11 } },
+                        grid: { display: false }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        labels: { color: '#ffffff', font: { family: 'Exo 2' } }
+                    }
+                }
+            }
+        };
+
+        let myChart = new Chart(
+            document.getElementById('myChartCanvas'),
+            config
+        );
+
+        proximaAtualizacao = setTimeout(() => atualizarGrafico(dados, myChart), 2000);
+    }
+
+    function atualizarGrafico(dados, myChart) {
+        fetch("/jogos/grafico", { cache: 'no-store' }).then(function (response) {
+            if (response.ok) {
+                response.json().then(function (novoRegistro) {
+                    
+                    dados.labels = [];
+                    dados.datasets[0].data = [];
+
+                    for (let i = 0; i < novoRegistro.length; i++) {
+                        dados.labels.push(novoRegistro[i].titulo);
+                        dados.datasets[0].data.push(novoRegistro[i].total);
+                    }
+
+                    myChart.update();
+
+                    proximaAtualizacao = setTimeout(() => atualizarGrafico(dados, myChart), 2000);
+                });
+            } else {
+                console.error('Nenhum dado encontrado ou erro na API');
+                proximaAtualizacao = setTimeout(() => atualizarGrafico(dados, myChart), 2000);
+            }
+        })
+        .catch(function (error) {
+            console.error(`Erro na obtenção dos dados em tempo real: ${error.message}`);
+            proximaAtualizacao = setTimeout(() => atualizarGrafico(dados, myChart), 2000);
+        });
+    }
 
     function carregarKpisDoUsuario() {
         var idUsuario = sessionStorage.ID_USUARIO;
@@ -135,72 +233,13 @@
                     resposta.json().then(kpis => {
                         document.getElementById("kpi_total_favoritos").innerHTML = kpis.total_favoritos;
                         document.getElementById("kpi_total_comentarios").innerHTML = kpis.total_comentarios;
-                        
                         document.getElementById("kpi_console_principal").innerHTML = kpis.console_favorito || "Nenhum ainda";
                         document.getElementById("kpi_jogo_mais_favoritado").innerHTML = kpis.rei_do_nexium || "Nenhum ainda";
-                        
                         document.getElementById("kpi_total_geral_posts").innerHTML = kpis.mural_ativo;
                     });
                 } else {
                     console.error("Erro ao puxar dados das KPIs");
                 }
             }).catch(erro => console.error("Erro de conexão na API de KPIs:", erro));
-    }
-
-    function exibirGrafico() {
-        fetch("/jogos/grafico", { cache: 'no-store' })
-            .then(resposta => {
-                if (resposta.ok) {
-                    resposta.json().then(dados => {
-                        
-                        let labelsJogos = [];
-                        let valoresFavoritos = [];
-                        
-                        for (let i = 0; i < dados.length; i++) {
-                            labelsJogos.push(dados[i].titulo);
-                            valoresFavoritos.push(dados[i].total);
-                        }
-
-                        const ctx = document.getElementById('myChartCanvas').getContext('2d');
-                        new Chart(ctx, {
-                            type: 'bar', 
-                            data: {
-                                labels: labelsJogos,
-                                datasets: [{
-                                    label: 'Total de Escolhas',
-                                    data: valoresFavoritos,
-                                    backgroundColor: '#a326fa', 
-                                    borderColor: '#00f2fe',     
-                                    borderWidth: 2,
-                                    borderRadius: 6
-                                }]
-                            },
-                            options: {
-                                responsive: true,
-                                scales: {
-                                    y: {
-                                        beginAtZero: true,
-                                        ticks: { color: '#ffffff' },
-                                        grid: { color: 'rgba(255, 255, 255, 0.1)' }
-                                    },
-                                    x: {
-                                        ticks: { color: '#ffffff' },
-                                        grid: { display: false }
-                                    }
-                                },
-                                plugins: {
-                                    legend: {
-                                        labels: { color: '#ffffff', font: { family: 'Exo 2' } }
-                                    }
-                                }
-                            }
-                        });
-
-                    });
-                } else {
-                    console.error("Erro ao buscar dados do gráfico ou nenhum favorito registrado.");
-                    document.getElementById("graficos").innerHTML = `<p style="color: #fff; text-align: center;">Nenhum jogo favoritado na comunidade ainda para gerar o gráfico.</p>`;
-                }
-            }).catch(erro => console.error("Erro de conexão com a API de gráficos:", erro));
     }
 </script>
