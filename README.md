@@ -9,7 +9,7 @@
 - [Autor]
 
 ## 💻 Sobre o Projeto
-Este Blog foi desenvolvido para apresentar jogos antigos que marcaram gerações para os novos usuários como uma forma de eternizar experiências para futuros interessados. Na Nexium, você poderá sanar dúvidas sobre tópicos relacionados as técnicas utilizadas para que o jogo pudesse ser jogado casualmente.
+Este Blog foi desenvolvido para apresentar jogos antigos que marcaram gerações para os novos usuários como uma forma de eternizar experiências para futuros interessados. Na Nexium, você poderá sanar dúvidas sobre tópicos relacionados as técnicas utilizadas para que os jogos pudessem ser jogados casualmente nos dias atuais.
 
 ## 🛠 Tecnologias Utilizadas
 Uma lista das ferramentas e linguagens:
@@ -23,7 +23,7 @@ Uma lista das ferramentas e linguagens:
 
 - Trello: https://trello.com/invite/b/69e2d5570ba1ccee743fdbd2/ATTI4f875236442266b591a59ddc348899d875D3BF08/pi-individual
 
-- Documentação: https://bandteccom-my.sharepoint.com/:w:/g/personal/gabryel_moura_sptech_school/IQAyOq-v_qRWT5vvA5vZJoOBAf6VobSr2hagfP9XVNUszqw?e=NTFbFY
+- Documentação: https://bandteccom-my.sharepoint.com/:f:/g/personal/gabryel_moura_sptech_school/IgD-pHK35zUFRIRDKHhLd-75AYWNIr_SiYX68c67hge4nmo?e=pbDjbN
 
 ## Autor
 - Gabryel da Silva Moura.
